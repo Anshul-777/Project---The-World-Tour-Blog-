@@ -2576,11 +2576,12 @@
         
     <!-- [Previous header, nav, and other sections remain exactly the same until the blog post pages] -->
 
+
     <!-- Blog Post Pages -->
     <div class="page-content" id="blog-post-page">
         <!-- Individual blog post pages would be loaded here dynamically -->
         <!-- For example, when clicking "Read More" on Eiffel Tower -->
-        <div class="blog-post-header" id="eiffel-post" style="background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+        <div class="blog-post-header" id="eiffel-post" style="background-image: url('https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg');">
             <div class="blog-post-title">
                 <h1>Eiffel Tower: The Iron Lady of Paris</h1>
                 <div class="blog-post-meta">
@@ -2599,7 +2600,7 @@
                 <h2>Historical Significance</h2>
                 <p>The Eiffel Tower was constructed between 1887 and 1889 as the entrance arch to the 1889 Exposition Universelle (World's Fair), held to celebrate the 100th anniversary of the French Revolution. Designed by engineer Gustave Eiffel, the tower was initially met with criticism but has since become a beloved emblem of French art, culture, and ingenuity.</p>
                 
-                <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg">
                 
                 <p>Standing 330 meters (1,083 feet) tall, the tower was the tallest man-made structure in the world until the completion of the Chrysler Building in New York in 1930.</p>
 
@@ -2613,7 +2614,7 @@
                     <li><strong>The Summit:</strong> Offers breathtaking 360-degree views of the city</li>
                 </ul>
                 
-                <img src="https://images.unsplash.com/photo-1529516542053-1f831f86c45f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg">
 
                 <h2>Visiting the Eiffel Tower Today</h2>
                 <p>Whether by stairs or elevator, ascending the Eiffel Tower is a must-do for any traveler in Paris. The tower is beautifully lit each night, and every hour after sunset, it sparkles for five magical minutes. Seasonal events and exhibitions are frequently held within its structure.</p>
@@ -2648,7 +2649,7 @@
         </div>
 
         <!-- Burj Khalifa Post -->
-        <div class="blog-post-header" id="burj-post" style="background-image: url('https://images.unsplash.com/photo-1604066867775-43f48b4b2b22?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+        <div class="blog-post-header" id="burj-post" style="background-image: url('https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg');">
             <div class="blog-post-title">
                 <h1>Burj Khalifa: The Tallest Marvel of Modern Architecture</h1>
                 <div class="blog-post-meta">
@@ -2665,7 +2666,7 @@
                 <h2>Historical Significance</h2>
                 <p>Inaugurated on January 4, 2010, the Burj Khalifa was built as part of Dubai's vision to transform into a global hub. Originally named "Burj Dubai," the tower was renamed in honor of Sheikh Khalifa bin Zayed Al Nahyan, the President of the UAE. It symbolizes the ambition and rapid development of the UAE in the 21st century.</p>
                 
-                <img src="https://images.unsplash.com/photo-1604066867775-43f48b4b2b22?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg">
                 
                 <p>The skyscraper is part of the larger Downtown Dubai development and plays a central role in the city's tourism and business sectors.</p>
 
@@ -2680,7 +2681,7 @@
                     <li><strong>The Dubai Fountain:</strong> A choreographed fountain show set on the Burj Lake</li>
                 </ul>
                 
-                <img src="https://images.unsplash.com/photo-1611309454929-53d663cfb4c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg">
 
                 <h2>Visiting Burj Khalifa Today</h2>
                 <p>Visitors can experience the thrill of high-speed elevators that take you to the observation decks, offering unparalleled views of Dubai's skyline, desert, and coastline. The tower sparkles at night with LED light shows and often hosts grand New Year's Eve fireworks displays.</p>
@@ -2715,7 +2716,7 @@
         </div>
 
         <!-- Mount Fuji Post -->
-        <div class="blog-post-header" id="fuji-post" style="background-image: url('https://images.unsplash.com/photo-1601108995695-42c25f5bb227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+        <div class="blog-post-header" id="fuji-post" style="background-image: url('https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg');">
             <div class="blog-post-title">
                 <h1>Mount Fuji: Japan's Sacred Peak</h1>
                 <div class="blog-post-meta">
@@ -2732,7 +2733,7 @@
                 <h2>Historical Significance</h2>
                 <p>Mount Fuji, or "Fujisan" in Japanese, has been worshipped for centuries. It's considered one of Japan's "Three Holy Mountains" alongside Mount Tate and Mount Haku. Pilgrimages to the summit began in the 7th century, and the volcano has inspired countless haikus, artworks, and spiritual traditions over time.</p>
                 
-                <img src="https://images.unsplash.com/photo-1601108995695-42c25f5bb227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg">
                 
                 <p>The mountain last erupted in 1707, and although dormant since then, it remains a powerful presence in Japanese consciousness and identity.</p>
 
@@ -2748,7 +2749,7 @@
                     <li><strong>Lake Kawaguchi:</strong> A serene area for nature lovers and Fuji-view seekers</li>
                 </ul>
                 
-                <img src="https://images.unsplash.com/photo-1580297101715-07c3d823c9c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+                <img src="https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg">
 
                 <h2>Visiting Mount Fuji Today</h2>
                 <p>Mount Fuji is open for climbing during the official season from early July to early September. Climbers can begin their ascent at various stations, with most aiming to witness the sunrise --- a phenomenon called "Goraiko."</p>
