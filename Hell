@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Your Story</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial;
+    }
+    .toolbar {
+      margin-bottom: 10px;
+    }
+    #story {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 16px;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Explore Your Story</h2>
+
+  <div class="toolbar">
+    <label>Font Size:
+      <select onchange="changeFontSize(this.value)">
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+      </select>
+    </label>
+    <label>Font Color:
+      <input type="color" onchange="changeFontColor(this.value)" />
+    </label>
+  </div>
+
+  <div id="story" contenteditable="true"></div>
+
+  <br>
+  <button onclick="submitStory()">Submit Your Story</button>
+
+  <script>
+    function changeFontSize(size) {
+      document.getElementById('story').style.fontSize = size;
+    }
+
+    function changeFontColor(color) {
+      document.getElementById('story').style.color = color;
+    }
+
+    function submitStory() {
+      alert("Your story has been submitted!");
+      // Optionally send data to backend
+    }
+  </script>
+</body>
+</html>
+
+
+blog.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Your Blog</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial;
+    }
+    .toolbar {
+      margin-bottom: 10px;
+    }
+    #blogContent {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 16px;
+      color: #000;
+    }
+    #imagePreview {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Create Your Blog</h2>
+
+  <div class="toolbar">
+    <label>Font Size:
+      <select onchange="changeFontSize(this.value)">
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+      </select>
+    </label>
+    <label>Font Color:
+      <input type="color" onchange="changeFontColor(this.value)" />
+    </label>
+    <label>Upload Image:
+      <input type="file" accept="image/*" onchange="previewImage(event)" />
+    </label>
+  </div>
+
+  <div id="blogContent" contenteditable="true"></div>
+  <img id="imagePreview" src="" alt="" />
+
+  <br>
+  <button onclick="submitBlog()">Submit Your Blog</button>
+
+  <script>
+    function changeFontSize(size) {
+      document.getElementById('blogContent').style.fontSize = size;
+    }
+
+    function changeFontColor(color) {
+      document.getElementById('blogContent').style.color = color;
+    }
+
+    function previewImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('imagePreview').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function submitBlog() {
+      alert("Your blog has been submitted!");
+      // Optionally send data to backend
+    }
+  </script>
+</body>
+</html>
