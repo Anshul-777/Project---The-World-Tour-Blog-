@@ -178,6 +178,38 @@
             font-size: 2rem;
             color: var(--primary-color);
         }
+          
+          .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeUp 0.6s ease-in-out;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 20px;
+  width: 220px;
+}
+.search-bar button {
+  background: #6c5ce7;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.search-bar button:hover {
+  background: #5a4cd4;
+}
+
 
         .header-right {
             display: flex;
@@ -1519,6 +1551,12 @@
                 <i class="fas fa-globe-americas"></i>
                 The World Tour
             </a>
+            
+            <div class="search-bar fade-up">
+  <input type="text" id="searchInput" placeholder="Search (e.g. article:My Blog Title)">
+  <button onclick="searchBlogs()">Search</button>
+</div>
+
             <div class="header-right">
                 <div class="theme-toggle" id="theme-toggle">
                     <i class="fas fa-sun"></i>
@@ -1553,8 +1591,8 @@
                     <h1 class="fade-in-up">Explore the World Through Stories</h1>
                     <p class="fade-in-up delay-1">Join our community of travel enthusiasts and discover breathtaking destinations, cultural experiences, and personal adventures from around the globe.</p>
                     <div class="hero-buttons fade-in-up delay-2">
-                        <button onclick="window.location.href='explore.html'">Explore your story</button>
-  <button onclick="window.location.href='blog.html'">Create your blog</button>
+                        <button onclick="window.location.href='blog'">Explore your story</button>
+                        <button onclick="window.location.href='blog.html'">Create your blog</button>
                     </div>
                 </div>
             </section>
@@ -2524,6 +2562,8 @@
                 </div>
             </div>
         </div>
+        
+        
         <div class="blog-post-content">
             <div class="container">
                 <p>Perched high in the Sahyadri mountain range of Maharashtra, Raigad Fort stands as a testament to Maratha valor and architectural brilliance. Once the capital of Chhatrapati Shivaji's kingdom, this hill fort offers not just breathtaking views but a deep dive into a pivotal chapter of Indian history.</p>
@@ -2593,7 +2633,7 @@
         </div>
 
         
-        <div class="blog-post-content>     
+        <div class="blog-post-content">     
             <div class="container">
                 <p>The <strong>Eiffel Tower</strong>, or <em>La Tour Eiffel</em> in French, stands as the most iconic symbol of Paris and one of the most recognized landmarks in the world. Located on the Champ de Mars near the Seine River, this towering iron structure draws millions of visitors every year.</p>
 
@@ -3822,7 +3862,36 @@
         const backToArticles = document.querySelectorAll('[data-back="articles"]');
         const blogLinks = document.querySelectorAll('[data-blog]');
         const accordionItems = document.querySelectorAll('.accordion-item');
+        
+         function searchBlogs() {
+    const input = document.getElementById('searchInput').value.trim().toLowerCase();
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
 
+    const results = posts.filter(post =>
+      input.startsWith('article:') ?
+        post.title.toLowerCase().includes(input.replace('article:', '').trim()) :
+        post.title.toLowerCase().includes(input) || post.content.toLowerCase().includes(input)
+    );
+
+    if (results.length === 0) {
+      alert('No matching blogs found!');
+      return;
+    }
+
+    // Replace main content with results
+    const container = document.querySelector('.blog-list') || document.createElement('div');
+    container.className = 'blog-list';
+    container.innerHTML = `<h2>Search Results:</h2>` + results.map(blog => `
+      <div class="blog-card fade-up">
+        <h3>${blog.title}</h3>
+        <p>${blog.content.slice(0, 150)}...</p>
+        <small>${new Date(blog.date).toLocaleString()}</small>
+      </div>
+    `).join('');
+
+    document.body.appendChild(container);
+  }
+  
         // Theme Toggle
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
