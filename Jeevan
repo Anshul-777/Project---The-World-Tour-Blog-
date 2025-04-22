@@ -1,0 +1,95 @@
+/* index.html */
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Tour Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-up">
+  <header class="site-header">
+    <div class="logo">World Tour Blog</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search (e.g. article:Paris)">
+    </div>
+    <div class="login"><a href="#">Login</a></div>
+  </header>  <main class="container blog-list">
+    <h1>All Blog Posts</h1>
+    <div id="posts"></div>
+    <button class="btn-primary" onclick="location.href='blog.html'">Create Your Blog</button>
+  </main>  <script src="script.js"></script></body>
+</html>/* blog.html */
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-up">
+  <header class="site-header">
+    <div class="logo">World Tour Blog</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search (e.g. article:Paris)">
+    </div>
+    <div class="login"><a href="#">Login</a></div>
+  </header>  <main class="container editor-container">
+    <h1>Create Your Blog</h1>
+    <div class="ribbon">
+      <button onclick="formatDoc('bold')" title="Bold"><b>B</b></button>
+      <button onclick="formatDoc('italic')" title="Italic"><i>I</i></button>
+      <button onclick="formatDoc('underline')" title="Underline"><u>U</u></button>
+      <select onchange="formatDoc('formatBlock', this.value)" title="Heading">
+        <option value="P">Paragraph</option>
+        <option value="H1">Heading 1</option>
+        <option value="H2">Heading 2</option>
+        <option value="H3">Heading 3</option>
+      </select>
+      <select onchange="formatDoc('fontName', this.value)" title="Font">
+        <option value="Arial">Arial</option>
+        <option value="'Times New Roman'">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="'Courier New'">Courier New</option>
+      </select>
+      <select onchange="formatDoc('fontSize', this.value)" title="Font Size">
+        <option value="3">12px</option>
+        <option value="4">14px</option>
+        <option value="5">18px</option>
+        <option value="6">24px</option>
+        <option value="7">32px</option>
+      </select>
+      <input type="color" onchange="formatDoc('foreColor', this.value)" title="Font Color">
+      <button onclick="formatDoc('insertUnorderedList')" title="Bullet List">• List</button>
+      <button onclick="formatDoc('insertOrderedList')" title="Numbered List">1. List</button>
+      <button onclick="formatDoc('justifyLeft')" title="Align Left">L</button>
+      <button onclick="formatDoc('justifyCenter')" title="Center">C</button>
+      <button onclick="formatDoc('justifyRight')" title="Right">R</button>
+    </div><input type="text" id="title" placeholder="Enter Blog Title">
+<div id="content" contenteditable="true"></div>
+<div id="uploadImage">
+  <label for="imageInput">Upload Image:</label>
+  <input type="file" id="imageInput" accept="image/*" onchange="insertImage(event)">
+</div>
+<button class="btn-submit" onclick="submitBlog()">Submit Blog</button>
+
+  </main>  <script src="script.js"></script></body>
+</html>/* style.css */ @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } .fade-up { animation: fadeUp 0.6s ease-out forwards; }
+
+body { margin:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f4f9; color:#333; } .site-header { display:flex; align-items:center; justify-content:space-between; background:#fff; padding:10px 20px; box-shadow:0 2px 6px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100; } .logo { font-size:24px; font-weight:bold; color:#6c5ce7; } .search-bar { flex:1; text-align:center; } .search-bar input { width:60%; padding:8px 12px; border:1px solid #ccc; border-radius:20px; transition:width 0.3s; } .search-bar input:focus { width:75%; outline:none; } .login a { text-decoration:none; color:#6c5ce7; font-weight:500; } .container { max-width:900px; margin:80px auto; padding:20px; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); } .blog-list h1 { margin-bottom:20px; } #posts .post-card { border:1px solid #ddd; padding:15px; margin-bottom:15px; border-radius:5px; transition:background 0.3s, transform 0.3s; } #posts .post-card:hover { background:#fafafa; transform:translateY(-2px); } .post-title { font-size:20px; color:#333; margin:0; } .btn-primary { background:linear-gradient(135deg,#6c5ce7,#a29bfe); border:none; color:#fff; padding:12px 25px; font-size:16px; border-radius:6px; cursor:pointer; transition:transform 0.3s; } .btn-primary:hover { transform:scale(1.05); } .editor-container { position:relative; } .ribbon { background:#6c5ce7; color:#fff; padding:10px; display:flex; flex-wrap:wrap; gap:8px; border-radius:5px 5px 0 0; } .ribbon button, .ribbon select, .ribbon input[type=color] { background:#fff; color:#333; border:1px solid #ccc; border-radius:4px; padding:5px 10px; cursor:pointer; transition:background 0.3s; } .ribbon button:hover, .ribbon select:hover, .ribbon input[type=color]:hover { background:#f0f0f0; } #title { width:100%; padding:10px; font-size:22px; margin:20px 0; border:1px solid #ccc; border-radius:4px; } #content { width:100%; min-height:300px; border:1px solid #ccc; border-radius:4px; padding:15px; } #uploadImage { margin:20px 0; } .btn-submit { background:linear-gradient(135deg,#00b894,#55efc4); border:none; padding:12px 25px; font-size:18px; color:#fff; border-radius:6px; cursor:pointer; transition:background 0.3s, transform 0.3s; } .btn-submit:hover { background:linear-gradient(135deg,#55efc4,#00b894); transform:translateY(-2px); }
+
+/* script.js */ document.addEventListener('DOMContentLoaded', function() { document.execCommand('defaultParagraphSeparator', false, 'p'); loadPosts();
+
+const search = document.getElementById('searchInput'); if (search) { search.addEventListener('input', filterPosts); } });
+
+function formatDoc(cmd, value = null) { document.execCommand(cmd, false, value); }
+
+function insertImage(event) { const file = event.target.files[0]; if (file) { const reader = new FileReader(); reader.onload = function(e) { formatDoc('insertImage', e.target.result); }; reader.readAsDataURL(file); } }
+
+function submitBlog() { const title = document.getElementById('title').value.trim(); const content = document.getElementById('content').innerHTML; if (!title) { alert('Please enter a title.'); return; } const posts = JSON.parse(localStorage.getItem('posts') || '[]'); posts.unshift({ title, content, date: new Date().toISOString() }); localStorage.setItem('posts', JSON.stringify(posts)); alert('Blog submitted successfully!'); window.location.href = 'index.html'; }
+
+function loadPosts() { const posts = JSON.parse(localStorage.getItem('posts') || '[]'); const container = document.getElementById('posts'); if (!container) return; container.innerHTML = ''; posts.forEach(post => { const card = document.createElement('div'); card.className = 'post-card'; card.innerHTML = <h2 class="post-title">${post.title}</h2><p class="post-date">${new Date(post.date).toLocaleString()}</p>; container.appendChild(card); }); }
+
+function filterPosts(e) { const query = e.target.value.trim(); const posts = JSON.parse(localStorage.getItem('posts') || '[]'); const container = document.getElementById('posts'); container.innerHTML = ''; if (!query) { loadPosts(); return; } let term = query; if (query.toLowerCase().startsWith('article:')) { term = query.split(':')[1] || ''; } const filtered = posts.filter(p => p.title.toLowerCase().includes(term.toLowerCase())); filtered.forEach(post => { const card = document.createElement('div'); card.className = 'post-card'; card.innerHTML = <h2 class="post-title">${post.title}</h2><p class="post-date">${new Date(post.date).toLocaleString()}</p>; container.appendChild(card); }); }
+
