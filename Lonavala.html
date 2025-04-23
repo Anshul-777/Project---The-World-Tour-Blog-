@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lonavala: The Serene Escape in the Sahyadris</title>
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1615800095081-0a76b382c99b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
+
+  <div class="blog-post-header" id="lonavala-post">
+    <div class="blog-post-title">
+      <h1>Lonavala: The Serene Escape in the Sahyadris</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 5, 2025</span>
+        <span><i class="far fa-clock"></i> 8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-content">
+    <p class="reveal">Nestled in the lush green folds of the Sahyadri hills, Lonavala is a tranquil hill station located between Mumbai and Pune. Known for its misty landscapes, cascading waterfalls, and refreshing climate, Lonavala offers the perfect weekend getaway for nature lovers and adventure seekers alike.</p>
+
+    <h2 class="reveal">Natural Significance</h2>
+    <p class="reveal">Lonavala comes alive during the monsoon when the hills turn green, and waterfalls gush down every cliff. Its name is derived from the Sanskrit words ‘Lonavli’, meaning a series of caves, referencing the ancient Buddhist rock-cut caves scattered throughout the region, such as Karla and Bhaja Caves.</p>
+    <p class="reveal">Developed during British rule, Lonavala quickly became a summer retreat for colonial officials seeking to escape the heat. Today, it’s a favorite destination for families, couples, and trekkers exploring the Western Ghats.</p>
+
+    <h2 class="reveal">Sightseeing Highlights</h2>
+    <ul class="reveal">
+      <li><strong>Bushi Dam:</strong> A monsoon favorite, ideal for splashing around in overflowing water streams</li>
+      <li><strong>Lion’s Point:</strong> Offers panoramic views of the valley, especially stunning at sunrise and sunset</li>
+      <li><strong>Karla & Bhaja Caves:</strong> Ancient Buddhist cave complexes with impressive carvings and stupas</li>
+      <li><strong>Tiger’s Leap:</strong> A cliff-top with a sheer drop that creates an illusion of a tiger leaping into the valley</li>
+      <li><strong>Lonavala Lake:</strong> A peaceful spot for boating and picnics, especially in the rainy season</li>
+    </ul>
+
+    <h2 class="reveal">Visiting Lonavala Today</h2>
+    <p class="reveal">Lonavala is easily accessible by road and rail from both Mumbai and Pune. The town is dotted with cozy resorts, homestays, and local snack stalls famous for Lonavala's iconic chikki (a brittle made from jaggery and nuts).</p>
+    <p class="reveal">The best time to visit is during the monsoon (June to September) or the cool winter months (October to February), when the surroundings are at their most scenic.</p>
+
+    <blockquote class="reveal">"Lonavala is where the sky meets the mist, and the heart meets peace." – A Local Trekker</blockquote>
+
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">My visit to Lonavala during a July weekend was pure bliss. The air was fresh with petrichor, and the clouds rolled over the hills like slow-moving tides. I trekked to Tiger’s Leap and watched the fog clear just long enough to reveal a breathtaking valley below.</p>
+    <p class="reveal">Eating hot corn on the cob while watching the rain from Bushi Dam steps was a memory I’ll always cherish. The chikki shops were a delightful surprise — I couldn’t resist packing a few boxes home!</p>
+
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Pack an umbrella or raincoat if visiting during monsoon</li>
+      <li>Try local snacks like vada pav, corn bhutta, and Lonavala chikki</li>
+      <li>Book resorts in advance during weekends and holidays</li>
+      <li>Wear sturdy shoes if you plan on trekking or exploring the caves</li>
+      <li>Visit early morning or evening for the best views from viewpoints</li>
+    </ul>
+
+    <p class="reveal">Whether you're chasing waterfalls or just seeking calm in the hills, Lonavala promises to refresh your senses. It’s not just a destination — it’s a breath of fresh air.</p>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
