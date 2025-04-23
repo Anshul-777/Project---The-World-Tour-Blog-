@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Your Story</title>
+  <style>
+    /* Page background and base font */
+    body {
+      background-color: #ffffff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      padding: 40px;
+      color: #333333;
+      line-height: 1.6;
+    }
+    /* Title styling */
+    .story-title {
+      font-size: 2.5rem;      /* large font size */
+      color: #2c3e50;         /* dark blue */
+      margin-bottom: 20px;
+    }
+    /* Main content styling */
+    .story-content {
+      font-size: 1.125rem;    /* roughly 18px */
+      color: #555555;         /* soft gray */
+      margin-bottom: 30px;
+    }
+    /* Basic button style */
+    .btn {
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    /* Submit button color */
+    .btn-submit {
+      background-color: #27ae60;
+      color: #ffffff;
+      margin-right: 10px;
+    }
+    /* Back button color */
+    .btn-back {
+      background-color: #2980b9;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="story-title">Write Your Story Here</h1>
+  <p class="story-content">
+    This page lets you style your text on a clean white background.<br/>
+    Feel free to add more paragraphs, images, or a form as needed.
+  </p>
+
+  <!-- Submit button -->
+  <button class="btn btn-submit" onclick="handleSubmit()">Submit</button>
+
+  <!-- Back to Home button -->
+  <button class="btn btn-back" onclick="window.location.href='index.html'">
+    ← Back to Home
+  </button>
+
+  <script>
+    function handleSubmit() {
+      // your submission logic goes here
+      alert('Your story has been submitted!');
+    }
+  </script>
+
+</body>
+</html>
