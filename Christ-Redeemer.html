@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christ the Redeemer: Embracing the Spirit of Rio de Janeiro</title>
+
+
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1541507232680-8c3746ec9c4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+
+
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
+
+  <div class="blog-post-header" id="christ-redeemer-post">
+    <div class="blog-post-title">
+      <h1>Christ the Redeemer: Embracing the Spirit of Rio de Janeiro</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 11, 2025</span>
+        <span><i class="far fa-clock"></i> 7 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-content">
+    <p class="reveal">Overlooking the vibrant city of Rio de Janeiro from atop Mount Corcovado, <strong>Christ the Redeemer</strong> stands with open arms as a symbol of peace, faith, and unity. Towering at 30 meters (98 feet) high, this world-famous statue is one of the most iconic landmarks in South America and one of the New Seven Wonders of the World.</p>
+
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">The idea for a Christian monument was first proposed in the 1850s, but it wasn't until the 1920s that construction began. Designed by Brazilian engineer Heitor da Silva Costa and French sculptor Paul Landowski, the statue was completed in 1931. Funded by donations from Brazilian Catholics, the statue became a beacon of Christianity and national pride.</p>
+    <p class="reveal">It has since become a spiritual icon for millions, representing not just religion but the open-hearted culture of Brazil.</p>
+
+    <h2 class="reveal">Architectural Marvel</h2>
+    <p class="reveal">Christ the Redeemer is constructed from reinforced concrete and soapstone, chosen for their enduring qualities and smooth texture. The statue’s outstretched arms span 28 meters (92 feet), symbolizing peace and protection over the city below.</p>
+
+    <ul class="reveal">
+      <li><strong>Height:</strong> 30 meters (98 feet), excluding the 8-meter (26-foot) pedestal</li>
+      <li><strong>Location:</strong> Summit of Mount Corcovado at 700 meters (2,300 feet) above sea level</li>
+      <li><strong>Design:</strong> Art Deco style with panoramic views of Rio, including Sugarloaf Mountain and Copacabana Beach</li>
+      <li><strong>Access:</strong> By train, van, or a scenic hike through the Tijuca Forest</li>
+    </ul>
+    <img class="reveal" src="https://images.unsplash.com/photo-1541507232680-8c3746ec9c4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Christ the Redeemer statue in Rio de Janeiro">
+
+    <h2 class="reveal">Visiting Christ the Redeemer Today</h2>
+    <p class="reveal">Open year-round, the site attracts millions of visitors annually. The best time to visit is early morning or late afternoon to avoid the crowds and catch the golden light. The surrounding Tijuca National Park offers lush greenery and rare wildlife along the way.</p>
+
+    <blockquote class="reveal">"When you stand beneath the statue and look up into the sky, there's an overwhelming sense of peace. It feels like the world is pausing to breathe." – Travel Enthusiast</blockquote>
+
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">My journey to Christ the Redeemer began with a train ride through the rainforest. As I stepped onto the viewing platform, Rio unfolded beneath me like a living painting. The statue, despite its immense size, radiated serenity and grace. Watching the sunset from that height felt sacred – the warm hues bathing both the city and the statue in golden light.</p>
+    <p class="reveal">It’s more than a monument – it’s a moment of spiritual and emotional connection with the world.</p>
+
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Book your tickets in advance, especially during peak tourist seasons</li>
+      <li>Carry a camera – the views are unforgettable</li>
+      <li>Go early or on weekdays to avoid large crowds</li>
+      <li>Bring a light jacket – it can get windy at the summit</li>
+      <li>Consider visiting nearby Sugarloaf Mountain on the same day</li>
+    </ul>
+
+    <p class="reveal">Christ the Redeemer remains a timeless icon of Brazil and a symbol of open-armed welcome to all. Whether for spiritual reflection or cultural exploration, it is a must-see destination that moves every soul who visits.</p>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
+
