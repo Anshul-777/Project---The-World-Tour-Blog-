@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machu Picchu Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div class="blog-post-header" id="machu-picchu-post" style="background-image: url('https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+    <div class="blog-post-title">
+        <h1>Machu Picchu: The Lost City of the Incas</h1>
+        <div class="blog-post-meta">
+            <span><i class="far fa-user"></i> By Rahul Sharma</span>
+            <span><i class="far fa-calendar"></i> April 11, 2025</span>
+            <span><i class="far fa-clock"></i> 9 min read</span>
+        </div>
+    </div>
+</div>
+
+<div class="blog-post-content">
+    <div class="container">
+        <p>Perched high in the Andes Mountains of Peru, <strong>Machu Picchu</strong> is an awe-inspiring archaeological wonder and a symbol of the Incan Empire. Hidden for centuries, this majestic city reveals the engineering brilliance and cultural legacy of one of South America’s most powerful civilizations.</p>
+
+        <h2>Historical Significance</h2>
+        <p>Believed to have been built in the 15th century by the Inca emperor Pachacuti, Machu Picchu served as a royal estate and ceremonial site. Abandoned during the Spanish conquest and later forgotten by the outside world, it remained a mystery until its rediscovery by American explorer Hiram Bingham in 1911.</p>
+        <p>Now a UNESCO World Heritage Site and one of the New Seven Wonders of the World, Machu Picchu stands as a proud reminder of Incan ingenuity, spirituality, and connection with nature.</p>
+
+        <h2>Architectural Marvel</h2>
+        <p>Set at an altitude of 2,430 meters (7,970 feet), Machu Picchu is a marvel of dry-stone construction and urban planning. With no use of mortar, the precision with which the stones were carved and fitted is nothing short of astonishing.</p>
+
+        <ul>
+            <li><strong>Temple of the Sun:</strong> A sacred space used for solar rituals</li>
+            <li><strong>Intihuatana Stone:</strong> A carved pillar believed to be a sundial</li>
+            <li><strong>Room of the Three Windows:</strong> Offering panoramic mountain views</li>
+            <li><strong>Terraces:</strong> Ingenious agricultural platforms that also prevented erosion</li>
+            <li><strong>Inca Bridge:</strong> A hidden pathway used as a strategic entry point</li>
+        </ul>
+
+        <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Machu Picchu in Peru">
+
+        <h2>Visiting Machu Picchu Today</h2>
+        <p>Visitors can reach Machu Picchu via a scenic train ride from Cusco or by trekking the famous Inca Trail. Entry is regulated to protect the site, so booking in advance is highly recommended. The early morning mist adds an ethereal quality to the ruins, making sunrise visits truly unforgettable.</p>
+
+        <blockquote>
+            "The moment you walk into Machu Picchu, it's like stepping into a dream. Every stone whispers a story from a world lost to time." – Local Guide
+        </blockquote>
+
+        <h2>Personal Experience</h2>
+        <p>Hiking up through the clouds, I caught my first glimpse of Machu Picchu just as the sun broke through. The green terraces, the ancient stones, the surrounding peaks — it was like standing in a sacred world suspended between earth and sky. The silence spoke louder than words ever could.</p>
+        <p>Sitting near the Temple of the Sun, I reflected on how deeply the Incas respected nature. The harmony between architecture and landscape here is a lesson in balance and sustainability.</p>
+
+        <h2>Travel Tips</h2>
+        <ul>
+            <li>Buy tickets in advance — including entry, bus, and train passes</li>
+            <li>Bring your passport — it’s required for entry and makes for a unique stamp</li>
+            <li>Carry light layers — temperatures can change quickly</li>
+            <li>Respect the rules — no drones or loud noises</li>
+            <li>Stay hydrated and take your time adjusting to the altitude</li>
+        </ul>
+
+        <p>Machu Picchu is not just a destination — it’s an experience that touches your soul. It’s a place where history, mystery, and natural beauty merge to create one of the most remarkable sites on Earth.</p>
+    </div>
+</div>
+
+<!-- Back to Blog button -->
+<div class="container" style="margin-bottom: 50px;">
+    <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+</div>
+
+</body>
+</html>
