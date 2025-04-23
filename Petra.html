@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petra: The Rose-Red City of Ancient Nabataean Glory</title>
+
+
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1600195077901-1e2c70e80b42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+
+
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
+
+  <div class="blog-post-header">
+    <div class="blog-post-title">
+      <h1>Petra: The Rose-Red City of Ancient Nabataean Glory</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 11, 2025</span>
+        <span><i class="far fa-clock"></i> 9 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-content">
+    <p class="reveal">Carved into the red sandstone cliffs of southern Jordan, <strong>Petra</strong> is a breathtaking archaeological wonder that once served as the thriving capital of the Nabataean Kingdom. Hidden away for centuries, this ancient city is now recognized as one of the New Seven Wonders of the World and a UNESCO World Heritage Site.</p>
+
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">Founded as early as the 4th century BCE, Petra became a key hub on the trade routes linking Arabia, Egypt, and the Mediterranean. The Nabataeans, master builders and hydraulic engineers, carved monumental temples, tombs, and dwellings straight into the rock face.</p>
+    <p class="reveal">The city reached its peak around the 1st century CE, but declined after Roman annexation and later earthquakes. Rediscovered in 1812 by Swiss explorer Johann Burckhardt, Petra is now Jordan’s most iconic heritage site.</p>
+
+    <h2 class="reveal">Architectural Marvel</h2>
+    <p class="reveal">Petra is a striking blend of Hellenistic, Middle Eastern, and Roman architecture. The approach through the narrow canyon known as the <strong>Siq</strong> is a magical experience, leading up to the grand reveal of:</p>
+    <ul class="reveal">
+      <li><strong>Al-Khazneh (The Treasury):</strong> The iconic façade with intricate carvings</li>
+      <li><strong>The Monastery (Ad Deir):</strong> A massive temple atop a 900-step climb</li>
+      <li><strong>The Royal Tombs:</strong> A row of elaborate mausoleums</li>
+      <li><strong>The Great Temple:</strong> Petra’s largest freestanding structure</li>
+      <li><strong>The High Place of Sacrifice:</strong> A religious altar offering panoramic views</li>
+    </ul>
+    <img class="reveal" src="https://images.unsplash.com/photo-1600195077901-1e2c70e80b42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Petra Treasury View">
+
+    <h2 class="reveal">Visiting Petra Today</h2>
+    <p class="reveal">Modern-day Petra is accessible via the town of Wadi Musa. The main archaeological park opens at dawn, offering cool temperatures and fewer crowds for those who arrive early.</p>
+    <p class="reveal">Petra by Night is a unique experience where visitors walk through the Siq lit by thousands of candles, leading to the Treasury bathed in moonlight and traditional Bedouin music.</p>
+
+    <blockquote class="reveal">"Every rock, every step tells a story — Petra isn’t just a city, it’s an open-air museum of ancient ingenuity and cultural fusion." – Local Archaeologist</blockquote>
+
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">Visiting Petra felt like stepping into a forgotten world. As I entered the Siq at sunrise, the stillness was profound. The moment I glimpsed the Treasury glowing in golden light, it took my breath away. Hiking to the Monastery was exhausting but worth every step for the solitude and staggering view.</p>
+    <p class="reveal">I spent hours wandering through tombs and ruins, marveling at the blend of nature and human artistry that makes Petra so special.</p>
+
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Wear sturdy walking shoes – Petra covers a vast area</li>
+      <li>Bring sun protection and stay hydrated</li>
+      <li>Hire a licensed guide to uncover hidden stories</li>
+      <li>Stay in Wadi Musa for convenience and local hospitality</li>
+      <li>Don’t miss Petra by Night for an enchanting twist</li>
+    </ul>
+
+    <p class="reveal">Petra is not merely a tourist site — it’s a majestic echo from the ancient world, preserved in rose-colored stone. Whether you're a history lover, adventurer, or spiritual seeker, Petra will leave you changed.</p>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
