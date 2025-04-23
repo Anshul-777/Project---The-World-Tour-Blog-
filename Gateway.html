@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gateway of India: The Majestic Arch of Mumbai</title>
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1617957741502-289a1a2f1885?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+
+    .blog-post-content { padding: 3rem 1rem; max-width: 800px; margin: auto; }
+    .blog-post-content h2 { margin-top: 2rem; font-size: 1.8rem; color: var(--primary); position: relative; }
+    .blog-post-content h2::after {
+      content: ''; width: 50px; height: 4px; background: var(--accent);
+      display: block; margin-top: 0.3rem; border-radius: 2px;
+    }
+    .blog-post-content p, .blog-post-content ul, .blog-post-content blockquote, .blog-post-content img {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem; border-left: 4px solid var(--secondary);
+      background: #fff; font-style: italic; color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header><nav><a href="index.html">&#8592; Back to Blogs</a></nav></header>
+  <div class="blog-post-header" id="gateway-post">
+    <div class="blog-post-title">
+      <h1>Gateway of India: The Majestic Arch of Mumbai</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 5, 2025</span>
+        <span><i class="far fa-clock"></i> 6 min read</span>
+      </div>
+    </div>
+  </div>
+  <div class="blog-post-content">
+    <p class="reveal">Overlooking the Arabian Sea at Apollo Bunder in South Mumbai, the Gateway of India stands as one of India’s most iconic landmarks. Built during the British Raj, this monumental archway has witnessed both grandeur and historic change, marking the entry of British viceroys and the symbolic exit of colonial rule.</p>
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">The Gateway of India was built in 1924 to commemorate the visit of King George V and Queen Mary to Mumbai (then Bombay) in 1911. Designed by Scottish architect George Wittet, it combines elements of Indo-Saracenic, Islamic, and European Gothic styles, making it a unique architectural piece.</p>
+    <p class="reveal">Post-independence, it became a symbol of freedom when the last British troops ceremonially exited India through this arch in 1948. Today, it is not just a colonial relic but a powerful symbol of transition and resilience in Indian history.</p>
+    <h2 class="reveal">Architectural Marvel</h2>
+    <ul class="reveal">
+      <li><strong>Height:</strong> 26 meters (85 feet), made from yellow basalt and reinforced concrete</li>
+      <li><strong>Design:</strong> Indo-Saracenic style with four turrets and intricate latticework</li>
+      <li><strong>Plaza:</strong> A large, open plaza surrounds the structure, often filled with tourists, street vendors, and photographers</li>
+    </ul>
+    <h2 class="reveal">Visiting the Gateway Today</h2>
+    <p class="reveal">The Gateway of India is a must-visit for every traveler coming to Mumbai. It’s a hub for ferry rides to Elephanta Caves and scenic cruises along the harbor. The Taj Mahal Palace Hotel stands grandly adjacent, adding to the historic landscape.</p>
+    <p class="reveal">The best time to visit is early morning or late evening to avoid crowds and enjoy a peaceful stroll along the waterfront. Night-time views of the illuminated arch and hotel are particularly stunning.</p>
+    <blockquote class="reveal">"The Gateway of India is where the sea meets stories. Every stone here has witnessed the rise of a city and the spirit of a nation." – Mumbai Local</blockquote>
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">On my visit to Mumbai, I stood by the Gateway during the golden hour, watching the sun set behind boats bobbing in the harbor. The structure had a quiet strength — surrounded by a lively crowd yet standing calmly, like it had seen centuries unfold before it.</p>
+    <p class="reveal">Local guides offered interesting trivia, including the fact that the arch has no gates — just a symbolic threshold. I took a short ferry to Elephanta Island from here, making it an ideal day-long plan.</p>
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Reach early morning or at dusk for best photos and less crowd</li>
+      <li>Pair your visit with a ferry ride to Elephanta Caves (closed Mondays)</li>
+      <li>Try bhel puri or vada pav from nearby stalls for a taste of Mumbai street food</li>
+      <li>Be cautious of touts offering overpriced tours</li>
+      <li>Don’t forget to photograph the arch with the iconic Taj Hotel in the frame</li>
+    </ul>
+    <p class="reveal">The Gateway of India isn’t just an architectural landmark — it’s a cultural checkpoint, reminding every visitor of Mumbai’s rich colonial history, vibrant present, and bold future.</p>
+  </div>
+  <div class="container" style="margin-bottom:50px;"><a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a></div>
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
