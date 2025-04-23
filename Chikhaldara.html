@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chikhaldara: Maharashtra’s Hidden Hill Station</title>
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1597254031747-b7402a8e28b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
+
+  <div class="blog-post-header" id="chikhaldara-post">
+    <div class="blog-post-title">
+      <h1>Chikhaldara: Maharashtra’s Hidden Hill Station</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 5, 2025</span>
+        <span><i class="far fa-clock"></i> 8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-content">
+    <p class="reveal">Tucked away in the Satpura range of northern Maharashtra, Chikhaldara is the state’s only coffee-growing region and a tranquil retreat known for its cool climate, deep valleys, and lush forests. A perfect mix of serenity and wilderness, Chikhaldara feels like a slice of heaven far from the city bustle.</p>
+
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">Chikhaldara finds mention in the Mahabharata as the place where Bheema is said to have killed the villain Keechaka. The name “Chikhaldara” is derived from “Keechaka Dara,” meaning the valley of Keechaka. It was later developed by the British into a summer hill station, much like other colonial escapes.</p>
+    <p class="reveal">Beyond mythology, the region was significant during British rule due to its favorable climate and strategic location. It served as a center for military officers and colonial governance in the Vidarbha region.</p>
+
+    <h2 class="reveal">Natural Attractions</h2>
+    <ul class="reveal">
+      <li><strong>Gavilgad Fort:</strong> A medieval fort perched on cliffs, offering panoramic views of the valley</li>
+      <li><strong>Bhimalgadh Point:</strong> Known for sunrise views and misty vistas</li>
+      <li><strong>Panchbol Point:</strong> A natural echo point where your voice bounces off five surrounding hills</li>
+      <li><strong>Melghat Tiger Reserve:</strong> A wildlife sanctuary home to tigers, leopards, and sloth bears</li>
+      <li><strong>Shakkar Lake:</strong> A peaceful boating spot surrounded by hills and forests</li>
+    </ul>
+
+    <h2 class="reveal">Visiting Chikhaldara Today</h2>
+    <p class="reveal">Chikhaldara is accessible by road via Amravati and offers a peaceful break from mainstream tourism. Resorts and eco-cottages provide a great stay experience amid nature, and the nearby tribal villages offer cultural insights.</p>
+    <p class="reveal">The best time to visit is from October to March when the skies are clear and wildlife sightings are more frequent. Monsoon also brings a magical charm with foggy mornings and roaring waterfalls.</p>
+
+    <blockquote class="reveal">"Chikhaldara isn’t just a hill station — it’s Maharashtra’s best-kept secret waiting to be explored." – Local Nature Guide</blockquote>
+
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">I visited Chikhaldara in early winter, and the crisp air paired with the scent of eucalyptus trees was absolutely refreshing. Gavilgad Fort offered one of the best sunset views I've ever seen. A local guide helped us spot a leopard from a safe distance in Melghat — thrilling and unforgettable!</p>
+    <p class="reveal">Evenings by Shakkar Lake were serene, and the tribal art stalls nearby offered beautiful handmade souvenirs. I left with not just pictures, but stories to tell.</p>
+
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Carry warm clothes — temperatures drop in the evening</li>
+      <li>Use binoculars and camera gear for wildlife photography</li>
+      <li>Stay in eco-resorts to fully experience the forest environment</li>
+      <li>Local food is simple but flavorful — don’t miss the tribal thali</li>
+      <li>Plan a jeep safari through Melghat Tiger Reserve with permits</li>
+    </ul>
+
+    <p class="reveal">Chikhaldara is more than a hill station — it's a serene blend of myth, nature, and adventure. Ideal for slow travelers and explorers, it promises an experience unlike any other in Maharashtra.</p>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
