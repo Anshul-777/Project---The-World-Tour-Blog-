@@ -178,6 +178,38 @@
             font-size: 2rem;
             color: var(--primary-color);
         }
+          
+          .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeUp 0.6s ease-in-out;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 20px;
+  width: 220px;
+}
+.search-bar button {
+  background: #6c5ce7;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.search-bar button:hover {
+  background: #5a4cd4;
+}
+
 
         .header-right {
             display: flex;
@@ -1519,6 +1551,12 @@
                 <i class="fas fa-globe-americas"></i>
                 The World Tour
             </a>
+            
+            <div class="search-bar fade-up">
+  <input type="text" id="searchInput" placeholder="Search (e.g. article:My Blog Title)">
+  <button onclick="searchBlogs()">Search</button>
+</div>
+
             <div class="header-right">
                 <div class="theme-toggle" id="theme-toggle">
                     <i class="fas fa-sun"></i>
@@ -1553,8 +1591,8 @@
                     <h1 class="fade-in-up">Explore the World Through Stories</h1>
                     <p class="fade-in-up delay-1">Join our community of travel enthusiasts and discover breathtaking destinations, cultural experiences, and personal adventures from around the globe.</p>
                     <div class="hero-buttons fade-in-up delay-2">
-                        <a href="#" class="btn explore-btn" data-page="blog">Explore Stories</a>
-                        <a href="#" class="btn create-btn" data-page="features">Create Your Blog</a>
+                        <button onclick="window.location.href='blog'">Explore your story</button>
+                        <button onclick="window.location.href='Create.html'">Create your blog</button>
                     </div>
                 </div>
             </section>
@@ -1572,7 +1610,7 @@
                                 <p>Explore the historic Raigad Fort, the capital of Chhatrapati Shivaji's kingdom, perched high in the Sahyadri mountains.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Apr 5, 2025</span>
-                                    <a href="#" class="btn" data-blog="raigad">Read More</a>
+                                    <a href="Raigad.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1584,7 +1622,7 @@
                                 <p>Discover the history and significance of this majestic arch monument overlooking the Arabian Sea in Mumbai.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Apr 2, 2025</span>
-                                    <a href="#" class="btn" data-blog="gateway">Read More</a>
+                                    <a href="Gateway.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1596,7 +1634,7 @@
                                 <p>Discover the mystical Incan citadel of Machu Picchu, perched high in the Andes Mountains and shrouded in historical mystery.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 28, 2025</span>
-                                    <a href="#" class="btn" data-blog="machu-picchu">Read More</a>
+                                    <a href="Machu-Picchu.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1608,7 +1646,7 @@
                                 <p>Step back in time at Rome's iconic Colosseum, where gladiators once battled and emperors entertained the masses.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 25, 2025</span>
-                                    <a href="#" class="btn" data-blog="colosseum">Read More</a>
+                                    <a href="Colosseum.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1620,7 +1658,7 @@
                                 <p>Venture through the narrow Siq to discover Petra's stunning facades carved into rose-colored stone cliffs thousands of years ago.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 20, 2025</span>
-                                    <a href="#" class="btn" data-blog="petra">Read More</a>
+                                    <a href="Petra.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1632,7 +1670,7 @@
                                 <p>Experience the magic of Paris from the iconic Eiffel Tower, a symbol of France and one of the most recognizable structures in the world.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 18, 2025</span>
-                                    <a href="#" class="btn" data-blog="eiffel">Read More</a>
+                                    <a href="Eiffel-Tower.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1644,7 +1682,7 @@
                                 <p>Witness the breathtaking power and beauty of Niagara Falls, straddling the border between Canada and the United States.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 15, 2025</span>
-                                    <a href="#" class="btn" data-blog="niagara">Read More</a>
+                                    <a href="Niagara-Falls.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1656,7 +1694,7 @@
                                 <p>Relax in the milky-blue waters of Iceland's famous geothermal spa, surrounded by lava fields and stunning natural beauty.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 12, 2025</span>
-                                    <a href="#" class="btn" data-blog="blue-lagoon">Read More</a>
+                                    <a href="Blue-Lagoon.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1668,7 +1706,7 @@
                                 <p>Discover Japan's tallest and most sacred mountain, an active volcano that has inspired artists and pilgrims for centuries.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 10, 2025</span>
-                                    <a href="#" class="btn" data-blog="fuji">Read More</a>
+                                    <a href="Mount-fuji.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1680,7 +1718,7 @@
                                 <p>Experience the world's tallest building in Dubai, an architectural marvel that redefines what's possible in engineering and design.</p>
                                 <div class="blog-meta">
                                     <span><i class="far fa-calendar"></i> Mar 8, 2025</span>
-                                    <a href="#" class="btn" data-blog="burj-khalifa">Read More</a>
+                                     <a href="Burj-Khalifa.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1901,7 +1939,7 @@
                                 <p class="blog-grid-excerpt">The historic capital of Chhatrapati Shivaji's kingdom, offering breathtaking views and rich Maratha history.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Apr 5, 2025</span>
-                                    <a href="#" class="btn" data-blog="raigad">Read More</a>
+                                   <a href="Raigad.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1914,7 +1952,7 @@
                                 <p class="blog-grid-excerpt">Mumbai's iconic arch monument overlooking the Arabian Sea, built during the British Raj.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Apr 2, 2025</span>
-                                    <a href="#" class="btn" data-blog="gateway">Read More</a>
+                                    <a href="Gateway.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1927,7 +1965,7 @@
                                 <p class="blog-grid-excerpt">One of the most sacred Sikh shrines, marking the final resting place of Guru Gobind Singh.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 30, 2025</span>
-                                    <a href="#" class="btn" data-blog="hujusahib">Read More</a>
+                                    <a href="Hujusahib.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1940,7 +1978,7 @@
                                 <p class="blog-grid-excerpt">Maharashtra's only hill station in the Amravati district, known for its scenic beauty and coffee plantations.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 28, 2025</span>
-                                    <a href="#" class="btn" data-blog="chikaldhara">Read More</a>
+                                    <a href="Chikaldhara.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1954,7 +1992,7 @@
                                 <p class="blog-grid-excerpt">Popular hill station between Mumbai and Pune, famous for its chikki, waterfalls and scenic valleys.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 25, 2025</span>
-                                    <a href="#" class="btn" data-blog="lonavla">Read More</a>
+                                    <a href="Lonavala.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1968,7 +2006,7 @@
                                 <p class="blog-grid-excerpt">Birthplace of Chhatrapati Shivaji Maharaj, this hill fort offers stunning views and historical significance.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 22, 2025</span>
-                                    <a href="#" class="btn" data-blog="shivneri">Read More</a>
+                                    <a href="Shivneri.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1981,7 +2019,7 @@
                                 <p class="blog-grid-excerpt">Magnificent Hindu temple in Madurai dedicated to Goddess Meenakshi, known for its stunning architecture.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 20, 2025</span>
-                                    <a href="#" class="btn" data-blog="meenakshi">Read More</a>
+                                    <a href="Meenakshi.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1994,7 +2032,7 @@
                                 <p class="blog-grid-excerpt">Popular hill station in Maharashtra known for its strawberries, panoramic views and colonial-era architecture.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 18, 2025</span>
-                                    <a href="#" class="btn" data-blog="mahableshwar">Read More</a>
+                                    <a href="Mahabaleshwar.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -2007,7 +2045,7 @@
                                 <p class="blog-grid-excerpt">Historic fort in  that served as the main residence of Mughal emperors, a UNESCO World Heritage Site.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 15, 2025</span>
-                                    <a href="#" class="btn" data-blog="red-fort">Read More</a>
+                                    <a href="Red-fort.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -2021,7 +2059,7 @@
                                 <p class="blog-grid-excerpt">The world's longest wall and greatest feat of ancient defensive architecture stretching over 13,000 miles.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 12, 2025</span>
-                                    <a href="#" class="btn" data-blog="great-wall">Read More</a>
+                                    <a href="China-Wall.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -2034,7 +2072,7 @@
                                 <p class="blog-grid-excerpt">Ancient "Rose City" carved into pink sandstone cliffs in Jordan, lost to the Western world for centuries.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 10, 2025</span>
-                                    <a href="#" class="btn" data-blog="petra">Read More</a>
+                                    <a href="Petra.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -2047,7 +2085,7 @@
                             <p class="blog-grid-excerpt">Iconic statue of Jesus Christ overlooking Rio de Janeiro from the Corcovado mountain, one of the New Seven Wonders.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Mar 8, 2025</span>
-                                <a href="#" class="btn" data-blog="christ-redeemer">Read More</a>
+                                <a href="Redeemer.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2060,7 +2098,7 @@
                             <p class="blog-grid-excerpt">15th-century Inca citadel located in the Andes Mountains of Peru, often called the "Lost City of the Incas".</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Mar 5, 2025</span>
-                                <a href="#" class="btn" data-blog="machu-picchu">Read More</a>
+                                <a href="Machu-Picchu.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2073,7 +2111,7 @@
                             <p class="blog-grid-excerpt">Large pre-Columbian city built by the Maya people in Mexico, featuring the iconic El Castillo pyramid.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Mar 2, 2025</span>
-                                <a href="#" class="btn" data-blog="chichen-itza">Read More</a>
+                                <a href="Chichen-Itza.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2086,7 +2124,7 @@
                             <p class="blog-grid-excerpt">Oval amphitheater in Rome, the largest ever built, used for gladiatorial contests and public spectacles.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 28, 2025</span>
-                                <a href="#" class="btn" data-blog="colosseum">Read More</a>
+                                <a href="Colosseum.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2100,7 +2138,7 @@
                             <p class="blog-grid-excerpt">Iconic iron tower in Paris, France, one of the most recognizable structures in the world and a symbol of romance.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 25, 2025</span>
-                                <a href="#" class="btn" data-blog="eiffel">Read More</a>
+                                 <a href="Eiffel-Tower.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2113,7 +2151,7 @@
                             <p class="blog-grid-excerpt">Group of three waterfalls at the southern end of Niagara Gorge, spanning the border between Canada and the USA.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 22, 2025</span>
-                                <a href="#" class="btn" data-blog="niagara">Read More</a>
+                                <a href="Niagara-Falls.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2126,7 +2164,7 @@
                             <p class="blog-grid-excerpt">Geothermal spa in Iceland with milky-blue waters rich in minerals like silica and sulfur, surrounded by lava fields.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 20, 2025</span>
-                                <a href="#" class="btn" data-blog="blue-lagoon">Read More</a>
+                                <a href="Blue-Lagoon.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2139,7 +2177,7 @@
                             <p class="blog-grid-excerpt">Japan's tallest mountain and active volcano, considered sacred and a symbol of the country.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 18, 2025</span>
-                                <a href="#" class="btn" data-blog="fuji">Read More</a>
+                                <a href="Mount-fuji.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2152,7 +2190,7 @@
                             <p class="blog-grid-excerpt">World's tallest building in Dubai, standing at 828 meters with observation decks offering panoramic city views.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Feb 15, 2025</span>
-                                <a href="#" class="btn" data-blog="burj-khalifa">Read More</a>
+                                 <a href="Burj-Khalifa.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2509,414 +2547,23 @@
             </div>
         </section>
     </div>
-
-    <!-- Blog Post Pages -->
-    <div class="page-content" id="blog-post-page">
-        <!-- Individual blog post pages would be loaded here dynamically -->
-        <!-- For example, when clicking "Read More" on Raigad Fort -->
-        <div class="blog-post-header" id="raigad-post" style="background-image: url('https://i.ibb.co/3yYmJKGC/istockphoto-1226700711-612x612.jpg');">
-            <div class="blog-post-title">
-                <h1>Raigad Fort: The Fortress of Chhatrapati Shivaji Maharaj</h1>
-                <div class="blog-post-meta">
-                    <span><i class="far fa-user"></i> By Rahul Sharma</span>
-                    <span><i class="far fa-calendar"></i> April 5, 2025</span>
-                    <span><i class="far fa-clock"></i> 10 min read</span>
-                </div>
-            </div>
-        </div>
-        <div class="blog-post-content">
-            <div class="container">
-                <p>Perched high in the Sahyadri mountain range of Maharashtra, Raigad Fort stands as a testament to Maratha valor and architectural brilliance. Once the capital of Chhatrapati Shivaji's kingdom, this hill fort offers not just breathtaking views but a deep dive into a pivotal chapter of Indian history.</p>
-
-                <h2>Historical Significance</h2>
-                <p>Originally called Rairi, the fort was seized by Chhatrapati Shivaji Maharaj in 1656 from the royal house of the Chandrarrao Mores. Recognizing its strategic importance, Shivaji rebuilt and strengthened the fort, making it his capital in 1674 when he was crowned as the official king of the Maratha Empire.</p>
-
-                <img src="https://i.ibb.co/3yYmJKGC/istockphoto-1226700711-612x612.jpg">
-                <p>The fort witnessed many significant events, including Shivaji's coronation and the establishment of the Maratha navy. It remained the capital until the fall of the Maratha Empire to the British in 1818.</p>
-
-                <h2>Architectural Marvel</h2>
-                <p>Raigad's architecture showcases the military genius of the Marathas. The fort sits at an elevation of 820 meters (2,700 ft) above sea level, with its main entrance, the Maha Darwaja, positioned such that enemy elephants would find it impossible to charge.</p>
-
-                <p>Key structures within the fort include:</p>
-                <ul>
-                    <li><strong>Raj Bhavan:</strong> Shivaji's residence</li>
-                    <li><strong>Raj Sabha:</strong> The durbar hall where official ceremonies were held</li>
-                    <li><strong>Holi Cha Mal:</strong> The queen's quarters</li>
-                    <li><strong>Takmak Tok:</strong> A cliff from which prisoners were thrown as punishment</li>
-                    <li><strong>Ganga Sagar Lake:</strong> The main water reservoir</li>
-                </ul>
-
-                <img src="https://i.ibb.co/3yYmJKGC/istockphoto-1226700711-612x612.jpg">
-                <h2>Visiting Raigad Today</h2>
-                <p>Modern visitors to Raigad can reach the fort via a 1,737-step climb or a ropeway that offers spectacular aerial views. The Maharashtra government has developed the site with museums, information centers, and amenities while preserving its historical integrity.</p>
-
-                <p>The best time to visit is between October and March when the weather is pleasant. The light and sound show in the evening brings the fort's history to life through dramatic narration and lighting effects.</p>
-
-                <blockquote>
-                    "Raigad is not just stone and mortar - it's the embodiment of Maratha pride and self-rule. Walking through its gates is like stepping back into Shivaji's era." - Local Historian
-                </blockquote>
-
-                <h2>Personal Experience</h2>
-                <p>When I visited Raigad last monsoon, the mist-covered fort had an almost mystical quality. Standing in the Raj Sabha, I could almost hear the echoes of past discussions that shaped Maratha history. The view from the top is unparalleled - on clear days, you can see for miles across the Western Ghats.</p>
-
-                <p>The most moving moment was seeing Shivaji's samadhi (memorial) near the fort. Despite its simple appearance, the site commands deep respect from all visitors.</p>
-
-                <h2>Travel Tips</h2>
-                <ul>
-                    <li>Wear comfortable shoes as there's considerable walking involved</li>
-                    <li>Carry water and snacks, though basic facilities are available</li>
-                    <li>Hire a guide to fully appreciate the historical significance</li>
-                    <li>Visit early to avoid crowds and afternoon heat</li>
-                    <li>Don't miss the sunset views from the western bastions</li>
-                </ul>
-
-                <p>Raigad Fort remains one of Maharashtra's most important historical sites and a must-visit for anyone interested in India's rich past. More than just a tourist attraction, it's a symbol of resistance, good governance, and visionary leadership that continues to inspire.</p>
-            </div>
-        </div>
-        
-    <!-- [Previous header, nav, and other sections remain exactly the same until the blog post pages] -->
-
-
-    <!-- Blog Post Pages -->
-    <div class="page-content" id="blog-post-page">
-        <!-- Individual blog post pages would be loaded here dynamically -->
-        <!-- For example, when clicking "Read More" on Eiffel Tower -->
-        <div class="blog-post-header" id="eiffel-post" style="background-image: url('https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg');">
-            <div class="blog-post-title">
-                <h1>Eiffel Tower: The Iron Lady of Paris</h1>
-                <div class="blog-post-meta">
-                    <span><i class="far fa-user"></i> By Rahul Sharma</span>
-                    <span><i class="far fa-calendar"></i> April 11, 2025</span>
-                    <span><i class="far fa-clock"></i> 9 min read</span>
-                </div>
-            </div>
-        </div>
+    
+    
+    
+    
+ nh    <!--helooai jay shreee ram 
+    kya Karla.
+    babe edd.
+    hjdid.
+    ncgfhfubghjfd.
+    fnvhyfdbbv .-->
 
         
-        <div class="blog-post-content>     
-            <div class="container">
-                <p>The <strong>Eiffel Tower</strong>, or <em>La Tour Eiffel</em> in French, stands as the most iconic symbol of Paris and one of the most recognized landmarks in the world. Located on the Champ de Mars near the Seine River, this towering iron structure draws millions of visitors every year.</p>
 
-                <h2>Historical Significance</h2>
-                <p>The Eiffel Tower was constructed between 1887 and 1889 as the entrance arch to the 1889 Exposition Universelle (World's Fair), held to celebrate the 100th anniversary of the French Revolution. Designed by engineer Gustave Eiffel, the tower was initially met with criticism but has since become a beloved emblem of French art, culture, and ingenuity.</p>
-                
-                <img src="https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg">
-                
-                <p>Standing 330 meters (1,083 feet) tall, the tower was the tallest man-made structure in the world until the completion of the Chrysler Building in New York in 1930.</p>
-
-                <h2>Architectural Marvel</h2>
-                <p>The Eiffel Tower was built using over 18,000 individual iron parts and 2.5 million rivets. Its open-lattice design not only gives it aesthetic charm but also provides immense structural strength. The tower has three levels accessible to the public, offering panoramic views of Paris from every angle.</p>
-                
-                <p>Key highlights include:</p>
-                <ul>
-                    <li><strong>The First Floor:</strong> Features a glass floor, restaurants, and exhibits</li>
-                    <li><strong>The Second Floor:</strong> Home to the famous "Le Jules Verne" restaurant</li>
-                    <li><strong>The Summit:</strong> Offers breathtaking 360-degree views of the city</li>
-                </ul>
-                
-                <img src="https://i.ibb.co/Kx1PRB7b/premium-photo-1719430569503-338fc89eb21f.jpg">
-
-                <h2>Visiting the Eiffel Tower Today</h2>
-                <p>Whether by stairs or elevator, ascending the Eiffel Tower is a must-do for any traveler in Paris. The tower is beautifully lit each night, and every hour after sunset, it sparkles for five magical minutes. Seasonal events and exhibitions are frequently held within its structure.</p>
-                
-                <p>The tower is open year-round, though spring and autumn offer the best weather and lighter crowds. Booking tickets online in advance is highly recommended to skip long lines.</p>
-                
-                <blockquote>
-                    "The Eiffel Tower isn't just a landmark --- it's a love letter in iron, written to the skies of Paris." - Local Parisian Guide
-                </blockquote>
-
-                <h2>Personal Experience</h2>
-                <p>During my visit to the Eiffel Tower, I was stunned by the architectural elegance and the views from the top. Watching the sun set over the Seine while the city lights began to glow was an unforgettable experience. The sparkling tower at night felt straight out of a dream.</p>
-                
-                <p>Enjoying a croissant beneath the tower, surrounded by artists and the sound of street music, truly captured the soul of Paris for me.</p>
-
-                <h2>Travel Tips</h2>
-                <ul>
-                    <li>Buy your tickets online to avoid queues</li>
-                    <li>Visit early morning or late evening for fewer crowds</li>
-                    <li>Carry a camera --- the views are spectacular</li>
-                    <li>Bring a jacket if visiting the summit --- it's windy!</li>
-                    <li>Stay after sunset to see the hourly sparkle</li>
-                </ul>
-                
-                <p>The Eiffel Tower continues to inspire awe and romance more than a century after its construction. Whether you admire it from afar or climb to the top, this Parisian jewel is a must-see for every traveler exploring the world.</p>
-            </div>
-        </div>
-
-        <!-- Back button for blog posts -->
-        <div class="container" style="margin-bottom: 50px;">
-            <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-        </div>
-
-        <!-- Burj Khalifa Post -->
-        <div class="blog-post-header" id="burj-post" style="background-image: url('https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg');">
-            <div class="blog-post-title">
-                <h1>Burj Khalifa: The Tallest Marvel of Modern Architecture</h1>
-                <div class="blog-post-meta">
-                    <span><i class="far fa-user"></i> By Rahul Sharma</span>
-                    <span><i class="far fa-calendar"></i> April 11, 2025</span>
-                    <span><i class="far fa-clock"></i> 8 min read</span>
-                </div>
-            </div>
-        </div>
-        <div class="blog-post-content">
-            <div class="container">
-                <p>Standing tall amidst the futuristic skyline of Dubai, the <strong>Burj Khalifa</strong> is not only the world's tallest building but a global icon of innovation and architectural excellence. Soaring at 828 meters (2,717 feet), it dominates the city and offers awe-inspiring views, luxury, and engineering brilliance.</p>
-
-                <h2>Historical Significance</h2>
-                <p>Inaugurated on January 4, 2010, the Burj Khalifa was built as part of Dubai's vision to transform into a global hub. Originally named "Burj Dubai," the tower was renamed in honor of Sheikh Khalifa bin Zayed Al Nahyan, the President of the UAE. It symbolizes the ambition and rapid development of the UAE in the 21st century.</p>
-                
-                <img src="https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg">
-                
-                <p>The skyscraper is part of the larger Downtown Dubai development and plays a central role in the city's tourism and business sectors.</p>
-
-                <h2>Architectural Marvel</h2>
-                <p>Designed by architect Adrian Smith of Skidmore, Owings & Merrill, the Burj Khalifa combines Islamic architecture with cutting-edge design. Its triple-lobed footprint is inspired by the Hymenocallis flower. The structure is primarily reinforced concrete, with a spire composed of structural steel.</p>
-                
-                <p>Key features include:</p>
-                <ul>
-                    <li><strong>Observation Decks:</strong> "At the Top" on the 124th and 125th floors, and "At the Top SKY" on the 148th floor</li>
-                    <li><strong>Armani Hotel:</strong> Luxury accommodations designed by Giorgio Armani</li>
-                    <li><strong>Residential Units:</strong> Premium apartments with stunning views of Dubai</li>
-                    <li><strong>The Dubai Fountain:</strong> A choreographed fountain show set on the Burj Lake</li>
-                </ul>
-                
-                <img src="https://i.ibb.co/5x4S4v90/photo-1572364769167-198dcb7b520c.jpg">
-
-                <h2>Visiting Burj Khalifa Today</h2>
-                <p>Visitors can experience the thrill of high-speed elevators that take you to the observation decks, offering unparalleled views of Dubai's skyline, desert, and coastline. The tower sparkles at night with LED light shows and often hosts grand New Year's Eve fireworks displays.</p>
-                
-                <p>Tickets can be booked online, and it's best to visit around sunset for a breathtaking transition from day to night.</p>
-                
-                <blockquote>
-                    "The Burj Khalifa isn't just tall --- it's a beacon of human ambition, pushing the boundaries of what's possible." - Dubai City Guide
-                </blockquote>
-
-                <h2>Personal Experience</h2>
-                <p>My visit to the Burj Khalifa was nothing short of surreal. From the 148th floor, the city looked like a futuristic model --- a mesmerizing mix of desert and skyscrapers. The interactive displays inside also offer insight into the tower's construction and Dubai's transformation.</p>
-                
-                <p>Watching the Dubai Fountain from above while sipping coffee at the observation lounge was the highlight of the experience.</p>
-
-                <h2>Travel Tips</h2>
-                <ul>
-                    <li>Book your tickets in advance, especially for sunset hours</li>
-                    <li>Visit the Dubai Mall next door --- it's one of the world's largest</li>
-                    <li>Arrive early to explore the exhibits and enjoy the views longer</li>
-                    <li>Don't forget your camera --- the view is Instagram-worthy!</li>
-                    <li>Check if a light or fountain show is scheduled during your visit</li>
-                </ul>
-                
-                <p>The Burj Khalifa stands not only as an architectural feat but as a symbol of vision, determination, and global unity. It's a must-see for any world traveler.</p>
-            </div>
-        </div>
-
-        <!-- Back button for blog posts -->
-        <div class="container" style="margin-bottom: 50px;">
-            <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-        </div>
-
-        <!-- Mount Fuji Post -->
-        <div class="blog-post-header" id="fuji-post" style="background-image: url('https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg');">
-            <div class="blog-post-title">
-                <h1>Mount Fuji: Japan's Sacred Peak</h1>
-                <div class="blog-post-meta">
-                    <span><i class="far fa-user"></i> By Rahul Sharma</span>
-                    <span><i class="far fa-calendar"></i> April 11, 2025</span>
-                    <span><i class="far fa-clock"></i> 9 min read</span>
-                </div>
-            </div>
-        </div>
-        <div class="blog-post-content">
-            <div class="container">
-                <p>Rising gracefully from the Honshu plains, <strong>Mount Fuji</strong> is Japan's tallest peak and most iconic symbol. This majestic, snow-capped stratovolcano is not only a geological wonder but also a sacred site revered in Japanese culture and art.</p>
-
-                <h2>Historical Significance</h2>
-                <p>Mount Fuji, or "Fujisan" in Japanese, has been worshipped for centuries. It's considered one of Japan's "Three Holy Mountains" alongside Mount Tate and Mount Haku. Pilgrimages to the summit began in the 7th century, and the volcano has inspired countless haikus, artworks, and spiritual traditions over time.</p>
-                
-                <img src="https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg">
-                
-                <p>The mountain last erupted in 1707, and although dormant since then, it remains a powerful presence in Japanese consciousness and identity.</p>
-
-                <h2>Natural Marvel</h2>
-                <p>Standing at 3,776 meters (12,389 feet), Mount Fuji is visible from Tokyo on clear days. The symmetrical cone, often capped in snow, is a breathtaking sight that draws hikers, climbers, and photographers from around the globe.</p>
-                
-                <p>Key highlights around Mount Fuji include:</p>
-                <ul>
-                    <li><strong>Fuji Five Lakes:</strong> Scenic lakes at the base offering reflections of the mountain</li>
-                    <li><strong>Chureito Pagoda:</strong> A famous spot for iconic views of Fuji framed with cherry blossoms</li>
-                    <li><strong>Fujisan Sengen Shrine:</strong> Starting point for ancient pilgrimages</li>
-                    <li><strong>Yoshida Trail:</strong> The most popular route to the summit</li>
-                    <li><strong>Lake Kawaguchi:</strong> A serene area for nature lovers and Fuji-view seekers</li>
-                </ul>
-                
-                <img src="https://i.ibb.co/S1WSZ5F/premium-photo-1661878091370-4ccb8763756a.jpg">
-
-                <h2>Visiting Mount Fuji Today</h2>
-                <p>Mount Fuji is open for climbing during the official season from early July to early September. Climbers can begin their ascent at various stations, with most aiming to witness the sunrise --- a phenomenon called "Goraiko."</p>
-                
-                <p>Outside of climbing season, tourists can enjoy views from hot springs, explore nature trails, and visit heritage sites nearby. Public transport and tours from Tokyo make the journey very accessible.</p>
-                
-                <blockquote>
-                    "Mount Fuji is more than just a mountain --- it's a spiritual experience. Every view of it feels like witnessing a national treasure." -- Tokyo Travel Guide
-                </blockquote>
-
-                <h2>Personal Experience</h2>
-                <p>My trip to Mount Fuji during autumn was unforgettable. The vibrant fall foliage around the lakes created a stunning contrast against Fuji's white peak. I didn't climb to the summit, but a peaceful walk around Lake Kawaguchi made me feel deeply connected to nature.</p>
-                
-                <p>Standing at the Chureito Pagoda during sunset, with the mountain glowing behind it, was the kind of moment you never forget.</p>
-
-                <h2>Travel Tips</h2>
-                <ul>
-                    <li>Check the weather forecast before planning your visit</li>
-                    <li>Climbing is best done with proper gear and preparation</li>
-                    <li>Go early to avoid crowds, especially in cherry blossom or autumn seasons</li>
-                    <li>Stay overnight in a ryokan (traditional inn) for a full cultural experience</li>
-                    <li>Visit an onsen (hot spring) with a view of Fuji for the ultimate relaxation</li>
-                </ul>
-                
-                <p>Mount Fuji remains a beacon of peace, beauty, and endurance --- a must-visit destination for travelers seeking both natural wonder and cultural depth.</p>
-            </div>
-        </div>
-
-        <!-- Back button for blog posts -->
-        <div class="container" style="margin-bottom: 50px;">
-            <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-        </div>
-
-        <!-- Blue Lagoon Post -->
-        <div class="blog-post-header" id="blue-lagoon-post" style="background-image: url('https://i.ibb.co/TqD5FhhL/photo-1605946887833-f695e11011a1.jpg');">
-            <div class="blog-post-title">
-                <h1>The Blue Lagoon: Iceland's Geothermal Wonder</h1>
-                <div class="blog-post-meta">
-                    <span><i class="far fa-user"></i> By Rahul Sharma</span>
-                    <span><i class="far fa-calendar"></i> April 11, 2025</span>
-                    <span><i class="far fa-clock"></i> 7 min read</span>
-                </div>
-            </div>
-        </div>
-        <div class="blog-post-content">
-            <div class="container">
-                <p>Nestled in a lava field near Grindavík, the <strong>Blue Lagoon</strong> is one of Iceland's most iconic destinations. With its surreal milky-blue waters and steamy atmosphere, this geothermal spa is both a modern retreat and a natural marvel, offering relaxation and rejuvenation in the heart of volcanic landscapes.</p>
-
-                <h2>Natural Origins & Significance</h2>
-                <p>Formed in 1976 by runoff from a nearby geothermal power plant, the Blue Lagoon was initially an accidental creation. However, people soon discovered the water's unique combination of minerals, especially silica and sulfur, had healing properties --- particularly beneficial for skin conditions like psoriasis.</p>
-                
-                <img src="https://i.ibb.co/TqD5FhhL/photo-1605946887833-f695e11011a1.jpg">
-                
-                <p>Today, the lagoon is an internationally renowned spa and a symbol of Iceland's blend of nature and innovation.</p>
-
-                <h2>Relaxation and Facilities</h2>
-                <p>The Blue Lagoon maintains a temperature of about 37--40°C (98--104°F) year-round, making it an inviting escape in any season. Guests can indulge in:</p>
-                <ul>
-                    <li><strong>Silica Mud Masks:</strong> Natural masks provided in-water for skin care</li>
-                    <li><strong>Swim-up Bar:</strong> Enjoy smoothies or prosecco while soaking</li>
-                    <li><strong>Lava Restaurant:</strong> Fine dining with panoramic views of the lava fields</li>
-                    <li><strong>Retreat Spa:</strong> Luxurious treatment areas and private lagoons</li>
-                    <li><strong>Saunas & Steam Rooms:</strong> Built into lava rocks for added ambiance</li>
-                </ul>
-                
-                <img src="https://i.ibb.co/TqD5FhhL/photo-1605946887833-f695e11011a1.jpg">
-
-                <h2>Visiting the Blue Lagoon</h2>
-                <p>Located about 45 minutes from Reykjavík and just 20 minutes from Keflavík International Airport, the Blue Lagoon is easily accessible for travelers. It's often the first or last stop on an Iceland itinerary.</p>
-                
-                <p>Advance booking is essential, especially during peak seasons. Entry includes a towel, silica mask, and access to showers and locker rooms. Premium options offer robes, slippers, and drinks.</p>
-                
-                <blockquote>
-                    "The Blue Lagoon isn't just a spa --- it's a sanctuary where earth's raw elements soothe your soul." -- Icelandic Tourism Board
-                </blockquote>
-
-                <h2>Personal Experience</h2>
-                <p>When I stepped into the mist-covered lagoon, the warm water melted away the fatigue of travel. Floating with a silica mask on my face, I could feel the stress of city life dissolve. The contrast of icy air and steamy waters was invigorating.</p>
-                
-                <p>As the sun set behind the lava fields, the entire pool glowed in hues of blue and orange --- a sight I'll never forget.</p>
-
-                <h2>Travel Tips</h2>
-                <ul>
-                    <li>Book tickets online in advance --- slots sell out quickly</li>
-                    <li>Bring a waterproof phone case for photos in the water</li>
-                    <li>Condition your hair well --- the minerals can make it stiff</li>
-                    <li>Try visiting in the evening for fewer crowds and magical lighting</li>
-                    <li>Combine your visit with nearby attractions like the Reykjanes Peninsula</li>
-                </ul>
-                
-                <p>The Blue Lagoon is more than a spa --- it's a unique fusion of science, nature, and luxury. Whether you're visiting for wellness, wonder, or a bit of both, it's a rejuvenating highlight of any Icelandic journey.</p>
-            </div>
-        </div>
-
-        <!-- Back button for blog posts -->
-        <div class="container" style="margin-bottom: 50px;">
-            <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-        </div>
-    </div>
+        
 
 
-        <div class="blog-post-header" id="greatwall-post" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
-    <div class="blog-post-title">
-        <h1>Great Wall of China: A Wonder of Ancient Engineering</h1>
-        <div class="blog-post-meta">
-            <span><i class="far fa-user"></i> By Rahul Sharma</span>
-            <span><i class="far fa-calendar"></i> April 11, 2025</span>
-            <span><i class="far fa-clock"></i> 10 min read</span>
-        </div>
-    </div>
-</div>
-<div class="blog-post-content">
-    <div class="container">
-        <p>Stretching across deserts, mountains, and grasslands, the <strong>Great Wall of China</strong> is one of the most iconic landmarks in the world. Originally built to protect Chinese states from invasions, it now stands as a timeless symbol of strength, endurance, and ancient ingenuity.</p>
-
-        <h2>Historical Significance</h2>
-        <p>The construction of the wall began as early as the 7th century BC. It was later unified and extended during the reign of Emperor Qin Shi Huang (221–206 BC). Over centuries, dynasties like the Han and Ming further expanded and reinforced it.</p>
-
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Great Wall of China">
-
-        <p>At its peak, the wall stretched over 21,000 kilometers. It was equipped with watchtowers, barracks, and signaling systems using smoke and fire. The wall helped control immigration, trade, and defended against raids by nomadic groups.</p>
-
-        <h2>Architectural Marvel</h2>
-        <p>The Great Wall is an extraordinary feat of ancient engineering. Built with stone, brick, tamped earth, and wood, it crosses rugged terrain and steep mountains. Some sections are so steep they appear to cling to the cliffs.</p>
-
-        <p>Notable sections include:</p>
-        <ul>
-            <li><strong>Badaling:</strong> Most visited and well-restored, near Beijing</li>
-            <li><strong>Mutianyu:</strong> Less crowded with scenic beauty</li>
-            <li><strong>Jinshanling:</strong> Popular among hikers and photographers</li>
-            <li><strong>Jiayuguan:</strong> Westernmost fortress of the wall</li>
-        </ul>
-
-        <img src="https://images.unsplash.com/photo-1583573630791-1a4be7f1cd0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Wall winding over mountains">
-
-        <h2>Visiting the Great Wall Today</h2>
-        <p>Visitors can explore various parts of the wall depending on their interest. Some prefer the restored and accessible Badaling, while adventurers opt for the wild and remote parts. Ropeways and cable cars make some sections easier to reach.</p>
-
-        <p>The best time to visit is spring (April-May) and autumn (September-October) when the weather is pleasant and the views are clear.</p>
-
-        <blockquote>
-            "You are not a real hero unless you have climbed the Great Wall." - Chinese Proverb
-        </blockquote>
-
-        <h2>Personal Experience</h2>
-        <p>Walking along the Great Wall was both humbling and awe-inspiring. I visited the Mutianyu section and was stunned by the panoramic views. Each watchtower and stair seemed to whisper stories of ancient soldiers and emperors.</p>
-
-        <p>The endless stretches made me realize the determination and vision of the people who built it, stone by stone, across generations.</p>
-
-        <h2>Travel Tips</h2>
-        <ul>
-            <li>Wear comfortable shoes – the wall has steep steps and uneven terrain</li>
-            <li>Carry water, especially in summer months</li>
-            <li>Start early to avoid crowds and heat</li>
-            <li>Hire a guide for historical insights</li>
-            <li>Don’t forget your camera – the views are stunning!</li>
-        </ul>
-
-        <p>The Great Wall of China is not just an ancient monument; it's a walk through history. Whether you're a culture lover, hiker, or history buff, this world wonder promises a life-changing experience.</p>
-    </div>
-</div>
-
-<!-- Back button for blog posts -->
-<div class="container" style="margin-bottom: 50px;">
-    <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-</div>
-
+        
 
 
 <div class="blog-post-header" id="niagara-falls-post" style="background-image: url('https://images.unsplash.com/photo-1579888789451-f0d31c2e94b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
@@ -3687,8 +3334,7 @@
 
   <p>The Roman Colosseum remains a timeless monument to Rome’s power and creativity. A visit here is not just a trip through ruins—it’s a journey into the soul of an empire that shaped the world.</p>
 
-  <div style="margin-top: 30px;"><a href="#">** Back to Blog</a></div>
-</div>
+  
 
 </main>
 
@@ -3822,7 +3468,36 @@
         const backToArticles = document.querySelectorAll('[data-back="articles"]');
         const blogLinks = document.querySelectorAll('[data-blog]');
         const accordionItems = document.querySelectorAll('.accordion-item');
+        
+         function searchBlogs() {
+    const input = document.getElementById('searchInput').value.trim().toLowerCase();
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
 
+    const results = posts.filter(post =>
+      input.startsWith('article:') ?
+        post.title.toLowerCase().includes(input.replace('article:', '').trim()) :
+        post.title.toLowerCase().includes(input) || post.content.toLowerCase().includes(input)
+    );
+
+    if (results.length === 0) {
+      alert('No matching blogs found!');
+      return;
+    }
+
+    // Replace main content with results
+    const container = document.querySelector('.blog-list') || document.createElement('div');
+    container.className = 'blog-list';
+    container.innerHTML = `<h2>Search Results:</h2>` + results.map(blog => `
+      <div class="blog-card fade-up">
+        <h3>${blog.title}</h3>
+        <p>${blog.content.slice(0, 150)}...</p>
+        <small>${new Date(blog.date).toLocaleString()}</small>
+      </div>
+    `).join('');
+
+    document.body.appendChild(container);
+  }
+  
         // Theme Toggle
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
