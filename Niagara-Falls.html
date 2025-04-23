@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niagara Falls: Nature’s Majestic Power on the Canada-USA Border</title>
+
+
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+    .blog-post-header {
+      height: 60vh;
+      background-image: url('https://images.unsplash.com/photo-1579888789451-f0d31c2e94b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+
+
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
+
+  <div class="blog-post-header" id="niagara-falls-post">
+    <div class="blog-post-title">
+      <h1>Niagara Falls: Nature’s Majestic Power on the Canada-USA Border</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 11, 2025</span>
+        <span><i class="far fa-clock"></i> 8 min read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post-content">
+    <p class="reveal">Straddling the border of Ontario (Canada) and New York (USA), <strong>Niagara Falls</strong> is one of the most awe-inspiring natural wonders of the world. With over 3,100 tons of water plunging every second, the falls captivate millions of visitors each year with their thunderous roar and misty beauty.</p>
+
+    <h2 class="reveal">Natural Significance</h2>
+    <p class="reveal">Formed around 12,000 years ago by melting glaciers, Niagara Falls consists of three separate waterfalls — Horseshoe Falls, American Falls, and Bridal Veil Falls. The falls are not only a breathtaking sight but also a major source of hydroelectric power for both nations.</p>
+    <img class="reveal" src="https://images.unsplash.com/photo-1579888789451-f0d31c2e94b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Niagara Falls">
+
+    <h2 class="reveal">Attractions Around the Falls</h2>
+    <p class="reveal">The Niagara region offers much more than the waterfalls themselves. Visitors can enjoy:</p>
+    <ul class="reveal">
+      <li><strong>Maid of the Mist:</strong> A boat ride that takes you right to the base of the falls</li>
+      <li><strong>Journey Behind the Falls:</strong> Walk through tunnels and emerge behind Horseshoe Falls</li>
+      <li><strong>Niagara SkyWheel:</strong> A massive observation wheel for panoramic views</li>
+      <li><strong>Clifton Hill:</strong> A lively entertainment strip with restaurants, arcades, and museums</li>
+      <li><strong>Niagara Parks Botanical Gardens:</strong> A tranquil escape with over 99 acres of gardens</li>
+    </ul>
+    <img class="reveal" src="https://images.unsplash.com/photo-1611080626919-41e46c785b67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Niagara Falls at dusk">
+
+    <h2 class="reveal">Visiting Niagara Falls</h2>
+    <p class="reveal">Accessible from both the Canadian and U.S. sides, Niagara Falls is just a short drive from Toronto or Buffalo. The Canadian side offers the most iconic views, while the American side allows a closer, more rugged experience.</p>
+    <p class="reveal">The falls are illuminated every night, and special fireworks shows are scheduled during peak seasons, especially in summer and around major holidays.</p>
+
+    <blockquote class="reveal">"You don’t just see Niagara Falls — you feel it rumble in your chest and soak into your soul." – Local Tour Guide</blockquote>
+
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">I visited Niagara Falls during a late summer evening. The roar of the water was overwhelming in the best way possible. Standing at the railing near Horseshoe Falls, with mist rising into the golden sunset, was one of the most magical moments of my travels.</p>
+    <p class="reveal">The night view was equally stunning. As the falls lit up in shifting colors, I stood mesmerized by nature’s power fused with human imagination.</p>
+
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Carry a waterproof jacket — the mist will definitely find you!</li>
+      <li>Take the boat tour early to avoid long lines</li>
+      <li>Stay overnight to enjoy both daytime and nighttime views</li>
+      <li>Explore both sides of the border if possible (passport required)</li>
+      <li>Try local cuisine like Canadian maple treats or Buffalo wings on the U.S. side</li>
+    </ul>
+
+    <p class="reveal">Niagara Falls is not just a sightseeing stop — it’s a sensory overload of sound, water, and wonder. Whether you’re in search of adventure or tranquility, it remains one of the most powerful places to experience the beauty of nature up close.</p>
+  </div>
+
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
+</body>
+</html>
