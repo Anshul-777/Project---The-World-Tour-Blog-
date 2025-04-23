@@ -1591,8 +1591,11 @@
                     <h1 class="fade-in-up">Explore the World Through Stories</h1>
                     <p class="fade-in-up delay-1">Join our community of travel enthusiasts and discover breathtaking destinations, cultural experiences, and personal adventures from around the globe.</p>
                     <div class="hero-buttons fade-in-up delay-2">
-                        <button onclick="window.location.href='blog'">Explore your story</button>
-                        <button onclick="window.location.href='Create.html'">Create your blog</button>
+                        <button onclick="window.location.href='Explore.html'">Explore your story</button>
+
+                        <a href="Explore.html" class="btn btn-explore">Explore Your Story </a>
+                        
+                        <button onclick="window.location.href='Create_blog.html'">Create your blog</button>
                     </div>
                 </div>
             </section>
@@ -1965,7 +1968,7 @@
                                 <p class="blog-grid-excerpt">One of the most sacred Sikh shrines, marking the final resting place of Guru Gobind Singh.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 30, 2025</span>
-                                    <a href="Hujusahib.html" class="read-more-btn">Read More</a>
+                                    <a href="Hazursahib.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -1978,7 +1981,7 @@
                                 <p class="blog-grid-excerpt">Maharashtra's only hill station in the Amravati district, known for its scenic beauty and coffee plantations.</p>
                                 <div class="blog-grid-meta">
                                     <span><i class="far fa-calendar"></i> Mar 28, 2025</span>
-                                    <a href="Chikaldhara.html" class="read-more-btn">Read More</a>
+                                    <a href="Chikhaldara.html" class="read-more-btn">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -2085,7 +2088,7 @@
                             <p class="blog-grid-excerpt">Iconic statue of Jesus Christ overlooking Rio de Janeiro from the Corcovado mountain, one of the New Seven Wonders.</p>
                             <div class="blog-grid-meta">
                                 <span><i class="far fa-calendar"></i> Mar 8, 2025</span>
-                                <a href="Redeemer.html" class="read-more-btn">Read More</a>
+                                <a href="Christ-Redeemer.html" class="read-more-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -2387,7 +2390,7 @@
                     <h2 class="section-title">Meet Our Team</h2>
                     <div class="team-grid">
                         <div class="team-member">
-                            <img src="https://images.jpg" alt="Team Member" class="team-img">
+                            <img src="https://i.ibb.co/60qNkcmk/IMG-20250419-WA0010.jpg" alt="Team Member" class="team-img">
                             <div class="team-info">
                                 <h3 class="team-name">Om Shinde</h3></h3>
                                 <p class="team-role">Leader</p></p>
@@ -2423,7 +2426,7 @@
                             </div>
                         </div
                         <div class="team-member">
-                            <img src="<a href="https://ibb.co/VcQTj8ms"><img src="https://i.ibb.co/tTxDm5X9/ed36b382806676890a36bde4afb99566.jpg" alt="ed36b382806676890a36bde4afb99566" border="0"></a>" width="200px" Height="100px">
+                            <img src="<a href="https://ibb.co/VcQTj8ms"><img src="https://i.ibb.co/tTxDm5X9/ed36b382806676890a36bde4afb99566.jpg" alt="ed36b382806676890a36bde4afb99566" border="0"></a>
                             <div class="team-info">
                                 <h3 class="team-name">Anonymous</h3></h3>
                                 <p class="team-role">Special</p>
