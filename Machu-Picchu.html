@@ -1,72 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Machu Picchu Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Machu Picchu: The Lost City of the Incas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+
+    .blog-post-header {
+      height: 60vh;
+      background: center/cover no-repeat url('https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
 </head>
 <body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
 
-<div class="blog-post-header" id="machu-picchu-post" style="background-image: url('https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');">
+  <div class="blog-post-header" id="machu-picchu-post">
     <div class="blog-post-title">
-        <h1>Machu Picchu: The Lost City of the Incas</h1>
-        <div class="blog-post-meta">
-            <span><i class="far fa-user"></i> By Rahul Sharma</span>
-            <span><i class="far fa-calendar"></i> April 11, 2025</span>
-            <span><i class="far fa-clock"></i> 9 min read</span>
-        </div>
+      <h1>Machu Picchu: The Lost City of the Incas</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 11, 2025</span>
+        <span><i class="far fa-clock"></i> 9 min read</span>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="blog-post-content">
-    <div class="container">
-        <p>Perched high in the Andes Mountains of Peru, <strong>Machu Picchu</strong> is an awe-inspiring archaeological wonder and a symbol of the Incan Empire. Hidden for centuries, this majestic city reveals the engineering brilliance and cultural legacy of one of South America’s most powerful civilizations.</p>
+  <div class="blog-post-content">
+    <p class="reveal">Perched high in the Andes Mountains of Peru, <strong>Machu Picchu</strong> is an awe-inspiring archaeological wonder and a symbol of the Incan Empire. Hidden for centuries, this majestic city reveals the engineering brilliance and cultural legacy of one of South America’s most powerful civilizations.</p>
 
-        <h2>Historical Significance</h2>
-        <p>Believed to have been built in the 15th century by the Inca emperor Pachacuti, Machu Picchu served as a royal estate and ceremonial site. Abandoned during the Spanish conquest and later forgotten by the outside world, it remained a mystery until its rediscovery by American explorer Hiram Bingham in 1911.</p>
-        <p>Now a UNESCO World Heritage Site and one of the New Seven Wonders of the World, Machu Picchu stands as a proud reminder of Incan ingenuity, spirituality, and connection with nature.</p>
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">Believed to have been built in the 15th century by the Inca emperor Pachacuti, Machu Picchu served as a royal estate and ceremonial site. Abandoned during the Spanish conquest and later forgotten by the outside world, it remained a mystery until its rediscovery by American explorer Hiram Bingham in 1911.</p>
+    <p class="reveal">Now a UNESCO World Heritage Site and one of the New Seven Wonders of the World, Machu Picchu stands as a proud reminder of Incan ingenuity, spirituality, and connection with nature.</p>
 
-        <h2>Architectural Marvel</h2>
-        <p>Set at an altitude of 2,430 meters (7,970 feet), Machu Picchu is a marvel of dry-stone construction and urban planning. With no use of mortar, the precision with which the stones were carved and fitted is nothing short of astonishing.</p>
+    <h2 class="reveal">Architectural Marvel</h2>
+    <p class="reveal">Set at an altitude of 2,430 meters (7,970 feet), Machu Picchu is a marvel of dry-stone construction and urban planning. With no use of mortar, the precision with which the stones were carved and fitted is nothing short of astonishing.</p>
 
-        <ul>
-            <li><strong>Temple of the Sun:</strong> A sacred space used for solar rituals</li>
-            <li><strong>Intihuatana Stone:</strong> A carved pillar believed to be a sundial</li>
-            <li><strong>Room of the Three Windows:</strong> Offering panoramic mountain views</li>
-            <li><strong>Terraces:</strong> Ingenious agricultural platforms that also prevented erosion</li>
-            <li><strong>Inca Bridge:</strong> A hidden pathway used as a strategic entry point</li>
-        </ul>
+    <ul class="reveal">
+      <li><strong>Temple of the Sun:</strong> A sacred space used for solar rituals</li>
+      <li><strong>Intihuatana Stone:</strong> A carved pillar believed to be a sundial</li>
+      <li><strong>Room of the Three Windows:</strong> Offering panoramic mountain views</li>
+      <li><strong>Terraces:</strong> Ingenious agricultural platforms that also prevented erosion</li>
+      <li><strong>Inca Bridge:</strong> A hidden pathway used as a strategic entry point</li>
+    </ul>
 
-        <img src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Machu Picchu in Peru">
+    <img class="reveal" src="https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Machu Picchu in Peru">
 
-        <h2>Visiting Machu Picchu Today</h2>
-        <p>Visitors can reach Machu Picchu via a scenic train ride from Cusco or by trekking the famous Inca Trail. Entry is regulated to protect the site, so booking in advance is highly recommended. The early morning mist adds an ethereal quality to the ruins, making sunrise visits truly unforgettable.</p>
+    <h2 class="reveal">Visiting Machu Picchu Today</h2>
+    <p class="reveal">Visitors can reach Machu Picchu via a scenic train ride from Cusco or by trekking the famous Inca Trail. Entry is regulated to protect the site, so booking in advance is highly recommended. The early morning mist adds an ethereal quality to the ruins, making sunrise visits truly unforgettable.</p>
 
-        <blockquote>
-            "The moment you walk into Machu Picchu, it's like stepping into a dream. Every stone whispers a story from a world lost to time." – Local Guide
-        </blockquote>
+    <blockquote class="reveal">"The moment you walk into Machu Picchu, it's like stepping into a dream. Every stone whispers a story from a world lost to time." – Local Guide</blockquote>
 
-        <h2>Personal Experience</h2>
-        <p>Hiking up through the clouds, I caught my first glimpse of Machu Picchu just as the sun broke through. The green terraces, the ancient stones, the surrounding peaks — it was like standing in a sacred world suspended between earth and sky. The silence spoke louder than words ever could.</p>
-        <p>Sitting near the Temple of the Sun, I reflected on how deeply the Incas respected nature. The harmony between architecture and landscape here is a lesson in balance and sustainability.</p>
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">Hiking up through the clouds, I caught my first glimpse of Machu Picchu just as the sun broke through. The green terraces, the ancient stones, the surrounding peaks — it was like standing in a sacred world suspended between earth and sky. The silence spoke louder than words ever could.</p>
+    <p class="reveal">Sitting near the Temple of the Sun, I reflected on how deeply the Incas respected nature. The harmony between architecture and landscape here is a lesson in balance and sustainability.</p>
 
-        <h2>Travel Tips</h2>
-        <ul>
-            <li>Buy tickets in advance — including entry, bus, and train passes</li>
-            <li>Bring your passport — it’s required for entry and makes for a unique stamp</li>
-            <li>Carry light layers — temperatures can change quickly</li>
-            <li>Respect the rules — no drones or loud noises</li>
-            <li>Stay hydrated and take your time adjusting to the altitude</li>
-        </ul>
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Buy tickets in advance — including entry, bus, and train passes</li>
+      <li>Bring your passport — it’s required for entry and makes for a unique stamp</li>
+      <li>Carry light layers — temperatures can change quickly</li>
+      <li>Respect the rules — no drones or loud noises</li>
+      <li>Stay hydrated and take your time adjusting to the altitude</li>
+    </ul>
 
-        <p>Machu Picchu is not just a destination — it’s an experience that touches your soul. It’s a place where history, mystery, and natural beauty merge to create one of the most remarkable sites on Earth.</p>
-    </div>
-</div>
+    <p class="reveal">Machu Picchu is not just a destination — it’s an experience that touches your soul. It’s a place where history, mystery, and natural beauty merge to create one of the most remarkable sites on Earth.</p>
+  </div>
 
-<div class="container" style="margin-bottom: 50px;">
-    <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-</div>
+  <div class="container" style="margin-bottom:50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
 
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
 </body>
 </html>
