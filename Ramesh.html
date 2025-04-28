@@ -1,0 +1,115 @@
+<!-- Save as explore.html --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Your Story</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --accent: #f2c94c;
+      --bg: #f9f9f9;
+      --text: #333;
+      --muted: #555;
+      --border: #ccc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    .toolbar button,
+    .toolbar select,
+    .toolbar input[type=color] {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .toolbar button:hover,
+    .toolbar select:hover,
+    .toolbar input[type=color]:hover {
+      background: var(--bg);
+    }
+    #editor {
+      margin-top: 1rem;
+      min-height: 300px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      background: #fff;
+      outline: none;
+    }
+    #submitBtn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #submitBtn:hover {
+      background: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Explore Your Story</h1>
+    <div class="toolbar">
+      <button onclick="exec('bold')" title="Bold"><i class="fas fa-bold"></i></button>
+      <button onclick="exec('italic')" title="Italic"><i class="fas fa-italic"></i></button>
+      <button onclick="exec('underline')" title="Underline"><i class="fas fa-underline"></i></button><select onchange="exec('fontSize', this.value)" title="Font Size">
+    <option value="1">10px</option>
+    <option value="2">13px</option>
+    <option value="3" selected>16px</option>
+    <option value="4">18px</option>
+    <option value="5">24px</option>
+    <option value="6">32px</option>
+    <option value="7">48px</option>
+  </select>
+
+  <input type="color" onchange="exec('foreColor', this.value)" title="Text Color">
+
+  <button onclick="exec('justifyLeft')" title="Align Left"><i class="fas fa-align-left"></i></button>
+  <button onclick="exec('justifyCenter')" title="Center"><i class="fas fa-align-center"></i></button>
+  <button onclick="exec('justifyRight')" title="Align Right"><i class="fas fa-align-right"></i></button>
+  <button onclick="exec('justifyFull')" title="Justify"><i class="fas fa-align-justify"></i></button>
+</div>
+
+<div id="editor" contenteditable="true"></div>
+<button id="submitBtn">Submit your Blog</button>
+
+  </div>  <script>
+    function exec(command, value = null) {
+      document.execCommand(command, false, value);
+      editor.focus();
+    }
+    const editor = document.getElementById('editor');
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const content = editor.innerHTML;
+      console.log(content); // Replace with your submit logic
+      alert('Blog submitted!');
+    });
+  </script></body>
+</html>
