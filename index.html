@@ -3740,6 +3740,19 @@
 
         // Show home page by default
         showPage('home-page');
+   
+        <iframe
+  src="chatbot.html"
+  style="position:fixed;bottom:0;right:0;width:100%;height:100%;border:none;pointer-events:none;visibility:hidden;z-index:9998;"
+  id="chatbot-frame"
+></iframe>
+<script>
+  // Expose the chatbot frame pointer
+  const frame = document.getElementById('chatbot-frame');
+  frame.style.width  = '0';  // invisible container
+  frame.style.height = '0';
+  frame.style.visibility = 'visible'; // allow child button to show
+
     </script>
 </body>
 </html>
