@@ -1,78 +1,204 @@
+<!-- Save as chichen-itza-blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chichen Itza Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chichen Itza: The Ancient Wonder of the Maya Civilization</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Theme Colors */
+    :root {
+      --primary: #ff6f61;
+      --secondary: #4a90e2;
+      --accent: #f2c94c;
+      --bg-light: #f9f9f9;
+      --text-main: #333333;
+      --text-muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+    header {
+      background: var(--secondary);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+    header nav a:hover { opacity: 0.7; }
+
+    .blog-post-header {
+      height: 60vh;
+      background: center/cover no-repeat url('https://i.ibb.co/tZTVS2C/chichen-itza.jpg');
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.2s ease-out;
+    }
+    .blog-post-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .blog-post-title {
+      position: relative;
+      max-width: 800px;
+      padding: 0 1rem;
+      animation: slideUp 1s 0.5s ease-out both;
+    }
+    .blog-post-title h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .blog-post-meta span { display: flex; align-items: center; color: var(--text-muted); }
+    .blog-post-meta i { margin-right: 0.3rem; }
+
+    .blog-post-content {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-post-content h2 {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+      position: relative;
+    }
+    .blog-post-content h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+    .blog-post-content p,
+    .blog-post-content ul,
+    .blog-post-content blockquote,
+    .blog-post-content img {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      margin-top: 1rem;
+    }
+    .blog-post-content ul { list-style: disc inside; color: var(--text-muted); }
+    .blog-post-content ul li { margin: 0.5rem 0; }
+    .blog-post-content blockquote {
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--secondary);
+      background: #fff;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .blog-post-content img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: scale(0.98);
+    }
+    .visible { opacity: 1 !important; transform: none !important; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
 </head>
 <body>
+  <header>
+    <nav><a href="index.html">&#8592; Back to Blogs</a></nav>
+  </header>
 
-<div class="blog-post-header" id="chichenitza-post" style="background-image: url('https://i.ibb.co/tZTVS2C/chichen-itza.jpg');">
+  <div class="blog-post-header" id="chichenitza-post">
     <div class="blog-post-title">
-        <h1>Chichen Itza: The Ancient Wonder of the Maya Civilization</h1>
-        <div class="blog-post-meta">
-            <span><i class="far fa-user"></i> By Rahul Sharma</span>
-            <span><i class="far fa-calendar"></i> April 23, 2025</span>
-            <span><i class="far fa-clock"></i> 8 min read</span>
-        </div>
+      <h1>Chichen Itza: The Ancient Wonder of the Maya Civilization</h1>
+      <div class="blog-post-meta">
+        <span><i class="far fa-user"></i> By Rahul Sharma</span>
+        <span><i class="far fa-calendar"></i> April 23, 2025</span>
+        <span><i class="far fa-clock"></i> 8 min read</span>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="blog-post-content">
-    <div class="container">
-        <p>Located in the heart of Mexico’s Yucatán Peninsula, Chichen Itza stands as a powerful reminder of the Maya civilization’s grandeur. Recognized as one of the New Seven Wonders of the World, it’s not only an archaeological site but a sacred cultural symbol rich in astronomical and architectural significance.</p>
+  <div class="blog-post-content">
+    <p class="reveal">Located in the heart of Mexico’s Yucatán Peninsula, Chichen Itza stands as a powerful reminder of the Maya civilization’s grandeur. Recognized as one of the New Seven Wonders of the World, it’s not only an archaeological site but a sacred cultural symbol rich in astronomical and architectural significance.</p>
 
-        <h2>Historical Significance</h2>
-        <p>Founded around the 6th century AD, Chichen Itza became one of the most influential city-states in the Maya world. It was a thriving center for politics, religion, and military power until its decline in the 13th century.</p>
+    <h2 class="reveal">Historical Significance</h2>
+    <p class="reveal">Founded around the 6th century AD, Chichen Itza became one of the most influential city-states in the Maya world. It was a thriving center for politics, religion, and military power until its decline in the 13th century.</p>
 
-        <img src="https://i.ibb.co/tZTVS2C/chichen-itza.jpg" alt="Chichen Itza Pyramid">
+    <img class="reveal" src="https://i.ibb.co/tZTVS2C/chichen-itza.jpg" alt="Chichen Itza Pyramid">
+    <p class="reveal">The site reflects a fusion of Maya and Toltec influences, particularly visible in its main structures. The Temple of Kukulcán, also known as El Castillo, is an iconic pyramid that served both as a temple and a calendar aligned with astronomical events.</p>
 
-        <p>The site reflects a fusion of Maya and Toltec influences, particularly visible in its main structures. The Temple of Kukulcán, also known as El Castillo, is an iconic pyramid that served both as a temple and a calendar aligned with astronomical events.</p>
+    <h2 class="reveal">Architectural Marvel</h2>
+    <p class="reveal">Chichen Itza’s architecture is filled with symbolism. El Castillo has 365 steps—one for each day of the solar year—and twice a year during the equinoxes, the shadow of a serpent appears to slither down the pyramid’s steps.</p>
+    <p class="reveal">Other remarkable structures include:</p>
+    <ul class="reveal">
+      <li><strong>Temple of the Warriors:</strong> A large stepped pyramid surrounded by carved columns</li>
+      <li><strong>Great Ball Court:</strong> The largest and most preserved ball court in ancient Mesoamerica</li>
+      <li><strong>Cenote Sagrado:</strong> A natural sinkhole used for rituals and sacrifices</li>
+      <li><strong>El Caracol:</strong> An observatory with spiral stairs used to track celestial events</li>
+    </ul>
 
-        <h2>Architectural Marvel</h2>
-        <p>Chichen Itza’s architecture is filled with symbolism. El Castillo has 365 steps—one for each day of the solar year—and twice a year during the equinoxes, the shadow of a serpent appears to slither down the pyramid’s steps.</p>
+    <img class="reveal" src="https://i.ibb.co/tZTVS2C/chichen-itza.jpg" alt="Chichen Itza Site Image">
 
-        <p>Other remarkable structures include:</p>
-        <ul>
-            <li><strong>Temple of the Warriors:</strong> A large stepped pyramid surrounded by carved columns</li>
-            <li><strong>Great Ball Court:</strong> The largest and most preserved ball court in ancient Mesoamerica</li>
-            <li><strong>Cenote Sagrado:</strong> A natural sinkhole used for rituals and sacrifices</li>
-            <li><strong>El Caracol:</strong> An observatory with spiral stairs used to track celestial events</li>
-        </ul>
+    <h2 class="reveal">Visiting Chichen Itza Today</h2>
+    <p class="reveal">Today, Chichen Itza is a UNESCO World Heritage Site attracting millions of visitors annually. Well-maintained pathways, guides, and plaques make it accessible for tourists while preserving its cultural integrity.</p>
+    <p class="reveal">The site is especially popular during the spring and autumn equinoxes when the Kukulcán serpent shadow phenomenon draws large crowds.</p>
 
-        <img src="https://i.ibb.co/tZTVS2C/chichen-itza.jpg" alt="Chichen Itza Site Image">
+    <blockquote class="reveal">"Chichen Itza is a stone encyclopedia of ancient wisdom. Every structure tells a story of knowledge, power, and cosmic connection." – Local Archaeologist</blockquote>
 
-        <h2>Visiting Chichen Itza Today</h2>
-        <p>Today, Chichen Itza is a UNESCO World Heritage Site attracting millions of visitors annually. Well-maintained pathways, guides, and plaques make it accessible for tourists while preserving its cultural integrity.</p>
+    <h2 class="reveal">Personal Experience</h2>
+    <p class="reveal">When I visited Chichen Itza, I was amazed by the precision of the architecture. Standing before El Castillo and witnessing the echo of a clap reverberate like a serpent’s call was surreal. The energy of the place is palpable, especially near the sacred cenote.</p>
+    <p class="reveal">The artwork on the pillars and the sheer size of the ball court left me in awe of the advanced engineering skills the ancient Maya possessed.</p>
 
-        <p>The site is especially popular during the spring and autumn equinoxes when the Kukulcán serpent shadow phenomenon draws large crowds.</p>
+    <h2 class="reveal">Travel Tips</h2>
+    <ul class="reveal">
+      <li>Arrive early to beat the heat and avoid crowds</li>
+      <li>Wear sunscreen and a hat – it can get very sunny</li>
+      <li>Hire a certified guide for historical context</li>
+      <li>Bring water and stay hydrated during your visit</li>
+      <li>Don’t miss the sound demonstration in front of El Castillo</li>
+    </ul>
 
-        <blockquote>
-            "Chichen Itza is a stone encyclopedia of ancient wisdom. Every structure tells a story of knowledge, power, and cosmic connection." - Local Archaeologist
-        </blockquote>
+    <p class="reveal">Chichen Itza is a mesmerizing blend of science, art, and spirituality. Visiting this ancient wonder offers not just a glimpse into the Maya past but a deeper understanding of human curiosity and innovation.</p>
+  </div>
 
-        <h2>Personal Experience</h2>
-        <p>When I visited Chichen Itza, I was amazed by the precision of the architecture. Standing before El Castillo and witnessing the echo of a clap reverberate like a serpent’s call was surreal. The energy of the place is palpable, especially near the sacred cenote.</p>
+  <div class="container" style="margin-bottom: 50px;">
+    <a href="index.html" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
 
-        <p>The artwork on the pillars and the sheer size of the ball court left me in awe of the advanced engineering skills the ancient Maya possessed.</p>
-
-        <h2>Travel Tips</h2>
-        <ul>
-            <li>Arrive early to beat the heat and avoid crowds</li>
-            <li>Wear sunscreen and a hat – it can get very sunny</li>
-            <li>Hire a certified guide for historical context</li>
-            <li>Bring water and stay hydrated during your visit</li>
-            <li>Don’t miss the sound demonstration in front of El Castillo</li>
-        </ul>
-
-        <p>Chichen Itza is a mesmerizing blend of science, art, and spirituality. Visiting this ancient wonder offers not just a glimpse into the Maya past but a deeper understanding of human curiosity and innovation.</p>
-    </div>
-</div>
-
-<div class="container" style="margin-bottom: 50px;">
-    <a href="#" class="btn" id="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
-</div>
-
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }).observe(el);
+    });
+  </script>
 </body>
 </html>
