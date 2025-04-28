@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Bot</title>
+  <style>
+    /* ▶ Floating Button */
+    #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px; height: 60px;
+      border: none; border-radius: 50%;
+      background: linear-gradient(135deg,#6c5ce7,#00b894);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer; z-index: 9999;
+      animation: pulse 2s infinite;
+      font-size: 28px; color: #fff;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50%      { transform: scale(1.1); }
+    }
+
+    /* ▶ Chat Window */
+    #chatbot-window {
+      position: fixed;
+      bottom: 90px; right: 20px;
+      width: 320px; max-height: 400px;
+      background: #fff; border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      display: none; flex-direction: column;
+      overflow: hidden; z-index: 9999;
+      font-family: sans-serif;
+    }
+    #chatbot-header {
+      background: #6c5ce7; color: #fff;
+      padding: 10px; display: flex; justify-content: space-between; align-items: center;
+    }
+    #chatbot-messages {
+      flex: 1; padding: 10px;
+      overflow-y: auto; background: #f4f4f9;
+    }
+    .msg { margin-bottom: 10px; }
+    .msg.user { text-align: right; }
+    .msg.user .bubble { display: inline-block; background: #00b894; color: #fff; }
+    .msg.bot  .bubble { display: inline-block; background: #ddd; color: #333; }
+    .bubble {
+      padding: 8px 12px; border-radius: 12px;
+      max-width: 80%;
+    }
+
+    #chatbot-form {
+      display: flex; border-top: 1px solid #eee;
+    }
+    #chatbot-input {
+      flex: 1; border: none; padding: 10px;
+      font-size: 14px;
+    }
+    #chatbot-input:focus { outline: none; }
+    #chatbot-send {
+      border: none; background: #6c5ce7; color: #fff;
+      padding: 0 16px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Robot Button -->
+  <button id="chatbot-toggle" title="Chat with Travel Bot">🤖</button>
+
+  <!-- Chat Window -->
+  <div id="chatbot-window">
+    <div id="chatbot-header">
+      <span>Travel Bot</span>
+      <button id="chatbot-close" style="background:none;border:none;color:#fff;font-size:18px;cursor:pointer;">✖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <form id="chatbot-form">
+      <input id="chatbot-input" type="text" placeholder="Ask me anything…" autocomplete="off" />
+      <button id="chatbot-send" type="submit">▶</button>
+    </form>
+  </div>
+
+  <script>
+    // — Your OpenAI API Key here (free-tier works)
+    const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY';
+
+    const toggleBtn  = document.getElementById('chatbot-toggle');
+    const win        = document.getElementById('chatbot-window');
+    const closeBtn   = document.getElementById('chatbot-close');
+    const form       = document.getElementById('chatbot-form');
+    const inputEl    = document.getElementById('chatbot-input');
+    const messagesEl = document.getElementById('chatbot-messages');
+
+    // Toggle open/close
+    toggleBtn.onclick = () => win.style.display = 'flex';
+    closeBtn .onclick = () => win.style.display = 'none';
+
+    // Append a message bubble
+    function appendMsg(text, sender) {
+      const msg = document.createElement('div');
+      msg.className = 'msg ' + sender;
+      msg.innerHTML = `<span class="bubble">${text}</span>`;
+      messagesEl.appendChild(msg);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    // Handle user submit
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const text = inputEl.value.trim();
+      if (!text) return;
+      appendMsg(text, 'user');
+      inputEl.value = '';
+
+      appendMsg('⏳ Thinking…', 'bot');
+      // Call OpenAI
+      const res = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type':'application/json',
+          'Authorization':'Bearer ' + OPENAI_API_KEY
+        },
+        body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: [
+            { role:'system', content:'You are a friendly travel assistant. Provide tips on blogs, destinations, travel advice.' },
+            { role:'user', content: text }
+          ]
+        })
+      });
+      const data = await res.json();
+      // Remove the “Thinking…” placeholder
+      messagesEl.querySelector('.msg.bot:last-child').remove();
+      const reply = data.choices?.[0]?.message?.content?.trim()
+                   || '😕 Sorry, something went wrong.';
+      appendMsg(reply, 'bot');
+    });
+  </script>
+</body>
+</html>
