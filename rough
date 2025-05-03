@@ -128,3 +128,107 @@ https://anshul-777.github.io/Project---The-World-Tour-Blog-/.
 
 <a href="https://ibb.co/r2HmCt4D"><img src="https://i.ibb.co/qYpdtnkT/premium-photo-1697730069404-280d3289650f.jpg" alt="premium-photo-1697730069404-280d3289650f" border="0"></a>
 <a href="https://ibb.co/Z1dBzsFV"><img src="https://i.ibb.co/CsBbKdYz/photo-1606516397986-1eeb79e8c052.jpg" alt="photo-1606516397986-1eeb79e8c052" border="0"></a>
+
+
+
+
+
+
+<?php
+require 'connect.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $mysqli->real_escape_string($_POST['username']);
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    if ($mysqli->query($sql)) {
+        header('Location: login.php?registered=1');
+        exit;
+    } else {
+        echo "Error: " . $mysqli->error;
+    }
+}
+?>
+<form method="post" action="register.php">
+  <input name="username" placeholder="Username" required>
+  <input name="password" type="password" placeholder="Password" required>
+  <button type="submit">Sign Up</button>
+</form>
+
+
+
+
+<?php
+require 'connect.php';
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $u = $mysqli->real_escape_string($_POST['username']);
+    $p = $_POST['password'];
+
+    $result = $mysqli->query("SELECT * FROM users WHERE username='$u'");
+    if ($result && $result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        if (password_verify($p, $user['password'])) {
+            $now = date('Y-m-d H:i:s');
+            $mysqli->query("UPDATE users SET last_login='$now' WHERE id={$user['id']}");
+
+            $_SESSION['user_id']   = $user['id'];
+            $_SESSION['username']  = $user['username'];
+
+            header('Location: account.php');
+            exit;
+        }
+    }
+    $error = "Invalid username or password";
+}
+?>
+<?php if (!empty($error)): ?>
+  <p style="color:red"><?=htmlspecialchars($error)?></p>
+<?php elseif (isset($_GET['registered'])): ?>
+  <p style="color:green">Registration successful! Please log in.</p>
+<?php endif; ?>
+
+<form method="post" action="login.php">
+  <input name="username" placeholder="Username" required>
+  <input name="password" type="password" placeholder="Password" required>
+  <button type="submit">Login</button>
+</form>
+
+
+
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
+<h1>Welcome, <?=htmlspecialchars($_SESSION['username'])?>!</h1>
+<p>Your last login was: 
+  <?php
+    require 'connect.php';
+    $id = (int)$_SESSION['user_id'];
+    $r = $mysqli->query("SELECT last_login FROM users WHERE id=$id");
+    echo $r->fetch_object()->last_login;
+  ?>
+</p>
+<a href="logout.php">Logout</a>
+
+
+<?php
+session_start();
+session_unset();
+session_destroy();
+header('Location: login.php');
+exit;
+
+
+
+
+
+
+
+
+
