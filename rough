@@ -234,6 +234,56 @@ CREATE TABLE users (
 );
 
 
+<?php
+$conn = new mysqli("localhost", "root", "", "the_world_tour");
+
+$title = $_POST['title'];
+$content = $_POST['content'];
+
+// Image upload
+$image1 = $_FILES['image1']['name'];
+$image2 = $_FILES['image2']['name'];
+$image3 = $_FILES['image3']['name'];
+
+$target = "uploads/";
+move_uploaded_file($_FILES['image1']['tmp_name'], $target.$image1);
+move_uploaded_file($_FILES['image2']['tmp_name'], $target.$image2);
+move_uploaded_file($_FILES['image3']['tmp_name'], $target.$image3);
+
+$sql = "INSERT INTO blog (title, content, image1, image2, image3) 
+        VALUES ('$title', '$content', '$image1', '$image2', '$image3')";
+
+if ($conn->query($sql)) {
+    echo "Blog posted successfully!";
+    header("Location: blog-list.php");
+} else {
+    echo "Error: " . $conn->error;
+}
+?>
+
+
+<?php
+$conn = new mysqli("localhost", "root", "", "the_world_tour");
+$result = $conn->query("SELECT * FROM blog ORDER BY created_at DESC");
+
+while ($row = $result->fetch_assoc()) {
+  echo "<h2>" . $row['title'] . "</h2>";
+  echo "<p>" . $row['content'] . "</p>";
+  echo "<img src='uploads/" . $row['image1'] . "' width='200'><br>";
+  if ($row['image2']) echo "<img src='uploads/" . $row['image2'] . "' width='200'><br>";
+  if ($row['image3']) echo "<img src='uploads/" . $row['image3'] . "' width='200'><br>";
+  echo "<hr>";
+}
+?>
+
+<form action="submit-blog.php" method="POST" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Blog Title" required><br>
+  <textarea name="content" placeholder="Write your blog here..." required></textarea><br>
+  <input type="file" name="image1" required><br>
+  <input type="file" name="image2"><br>
+  <input type="file" name="image3"><br>
+  <button type="submit">Submit Blog</button>
+</form>
 
 
 
